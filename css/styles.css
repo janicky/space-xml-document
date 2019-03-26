@@ -162,6 +162,13 @@ planets planet {
     box-shadow: rgba(0, 0, 0, .3) 0 15px 50px;
     border-radius: 10px;
     margin: 20px;
+    transition-duration: 400ms;
+}
+
+planets planet:hover {
+    transition-duration: 600ms;
+    transform: scale(1.05);
+    cursor: default;
 }
 
 planets planet > name {
@@ -241,6 +248,13 @@ satellites satellite {
     border-radius: 10px;
     margin: 20px;
     color: #fff;
+    transition-duration: 400ms;
+}
+
+satellites satellite:hover {
+    transition-duration: 600ms;
+    transform: scale(1.05);
+    cursor: default;
 }
 
 satellites satellite > name {
@@ -268,3 +282,60 @@ satellites satellite > discovery_date {
     border: 2px solid #4d5558;
 }
 
+/*
+* === MISSIONS ===
+*/
+missions:before {
+    content: "Missions";
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    padding: 35px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+
+missions {
+    background-image: url('../images/iss.jpg');
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 35px;
+}
+
+missions mission {
+    display: block;
+    border-left: 5px solid rgba(255, 255, 255, .9);
+    width: calc(33% - 40px);
+    padding: 10px 30px;
+    margin: 20px;
+    box-sizing: border-box;
+    opacity: .5;
+    transition-duration: 500ms;
+    cursor: pointer;
+}
+
+missions mission:hover {
+    opacity: 1;
+}
+
+missions mission > name {
+    display: block;
+    color: rgba(255, 255, 255, .9);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    padding: 0 10px;
+}
+
+missions mission > description {
+    display: block;
+    padding: 10px;
+    color: rgba(255, 255, 255, .6);
+    font-weight: 300;
+    font-size: 110%;
+    line-height: 140%;
+}
