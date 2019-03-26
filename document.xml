@@ -147,6 +147,19 @@
                 <detection_method>transit</detection_method>
             </parameters>
         </planet>
+        <planet id="LUYTENB">
+            <name>Luyten b</name>
+            <description>Is a confirmed exoplanet, likely rocky, orbiting within 
+                the habitable zone of the nearby red dwarf Luyten's Star.</description>
+            <discovery_date>2017-03-17</discovery_date>
+            <parameters>
+                <apoapsis>14991352</apoapsis>
+                <periapsis>12265679</periapsis>
+                <inclination>0.0</inclination>
+                <orbital_period type="days">18.649</orbital_period>
+                <detection_method>radial velocity</detection_method>
+            </parameters>
+        </planet>
     </planets>
 
 <!-- SATELLITES -->
