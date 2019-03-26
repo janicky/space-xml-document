@@ -339,3 +339,15 @@ missions mission > description {
     font-size: 110%;
     line-height: 140%;
 }
+
+@media only screen and (max-width: 1025px) {
+    planets planet {
+        width: calc(50% - 40px);
+    }
+    satellites satellite {
+        width: calc(50% - 40px);
+    }
+    missions mission {
+        width: 100%;
+    }
+}
