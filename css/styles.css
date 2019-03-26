@@ -1,68 +1,95 @@
 @import url('https://fonts.googleapis.com/css?family=Gugi|Roboto+Condensed:300,300i,400,700');
 
-space, planets, space > details, name, title,
-details > description {
+space, planets, name, title,
+details > description,
+space > details {
     display: block;
-}
-
-details title {
-    font-size: 2rem;
-}
-
-details description {
-    padding: 20px 0;
-}
-details description:before {
-    content: "Description: ";
 }
 
 space {
     background-color: #0b1c4b;
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
 }
 
+/*
+* === DETAILS ===
+*/
 space > details {
     background-color: #fff;
     padding: 30px;
 }
 
+space > details title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+space > details description {
+    font-size: 1.5rem;
+    padding: 10px 0;
+    color: rgba(0, 0, 0, .7);
+}
+space > details description:before {
+    content: "Description: ";
+}
+
 space > details authors {
+    background-color: rgba(0, 0, 0, .1);
     display: flex;
+    padding: 30px;
+    margin: 15px -30px -30px -30px;
 }
 
 space > details authors author {
     display: block;
-    background-color: rgba(0, 0, 0, .15);
     border-radius: 5px;
-    padding: 10px;
-    margin: 5px;
-}
-
-space > details authors author property[type="lastName"] {
-    border-right: 1px dotted rgba(0, 0, 0, .4);
-    padding-right: 8px;
     margin-right: 5px;
 }
 
+space > details authors author id {
+    padding: 2px;
+    display: inline-block;
+    opacity: 0.6;
+}
+space > details authors author id:before {
+    content: '(';
+}
+space > details authors author id:after {
+    content: ')';
+}
+
+/*
+* === PLANETS ===
+*/
 planets {
-    background-color: rgba(0, 0, 0, .5);
+    position: relative;
+    background-color: #4623a1;
     display: flex;
     flex-wrap: wrap;
     padding: 15px;
+    z-index: 1;
 }
 
 planets planet {
+    position: relative;
     margin: 15px;
     padding: 20px;
     width: 25%;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 30px 0 30px 0;
 }
 
 planets planet:after {
     position: absolute;
-    background-color: red;
-    content: counter;
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: #4623a1;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 15px;
+    z-index: -5;
 }
 
 planets planet > name {

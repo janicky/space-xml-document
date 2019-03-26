@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/css" href="styles.css"?>
+<?xml-stylesheet type="text/css" href="css/styles.css"?>
 <!DOCTYPE space SYSTEM "space.dtd">
 
 <space>
@@ -9,14 +9,14 @@
             and optionally missions.</description>
         <authors>
             <author>
-                <id>211807</id>
                 <first_name>Konrad</first_name>
                 <last_name>Jachimstal</last_name>
+                <id>211807</id>
             </author>
             <author>
-                <id>211951</id>
                 <first_name>Patryk</first_name>
                 <last_name>Janicki</last_name>
+                <id>211951</id>
             </author>
         </authors>
     </details>
