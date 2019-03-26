@@ -23,12 +23,12 @@
     <!-- struktura z danymi -->
     <!-- słownikowymi -->
     <!-- identyfikatory id="1" -->
-    <!--    Mars, 
-            Jupiter (galileuszowe), 
+    <!-- ✓   Mars, 
+         ✓   Jupiter (galileuszowe), 
             Saturn (pasterskie + Enceladus), 
-            Trappist 1e (bez księżyców), 
-            Proxima Centauri B (bez księżyców)  -->
-    <!--✓   Misja Opportunity, Curiosity -->
+         ✓   Trappist 1e (bez księżyców), 
+            Proxima Centauri B (bez księżyców) 
+         ✓   Misja Opportunity, Curiosity -->
     <planets>
         <planet id="EARTH" satellites="LUN">
             <name>Earth</name>
@@ -44,7 +44,7 @@
         
         <planet id="MARS" topology="rocky_planet" satellites="DEI|PHO">
             <name>Mars</name>
-            <symbol></symbol>
+            <symbol>♂</symbol>
             <description>Mars is the fourth planet from the Sun and the 
                 second-smallest planet in the Solar System after Mercury.</description>
             <parameters>
@@ -53,7 +53,35 @@
                 <inclination>5,65</inclination>
                 <orbital_period type="days">687</orbital_period>
             </parameters>
-            <last_mission id="M2" />
+            <last_mission id="M2|M3" />
+        </planet>
+
+        <planet id="JUPITER" topology="gas_giant" satellites="CAL|EUR|GAN|IO">
+            <name>Jupiter</name>
+            <symbol>♃</symbol>
+            <description>Jupiter is the fifth planet from the Sun and 
+                the largest in the Solar System.</description>
+            <parameters>
+                <apoapsis>816620000</apoapsis>
+                <peryapsis>740520000</peryapsis>
+                <inclination>6.09</inclination>
+                <orbital_period type="days">4332</orbital_period>
+            </parameters>
+        </planet>
+
+        <planet id="TRAPPIST1E" topology="rocky_planet">
+            <name>Trappist 1e</name>
+            <symbol></symbol>
+            <description>Trappist 1e is a planetary system consisting of seven planets 
+                orbiting an ultra-cool dwarf star, called TRAPPIST-1, about 40 
+                light-years away in the Aquarius constellation.</description>
+            <discovery_date>2017-02-22</discovery_date>
+            <parameters>
+                <apoapsis></apoapsis>
+                <peryapsis></peryapsis>
+                <inclination>89.860</inclination>
+                <orbital_period type="days">6</orbital_period>
+            </parameters>
         </planet>
 
     </planets>
@@ -78,15 +106,77 @@
     <satellites>
         <satellite id="DEI" body="MARS">
             <name>Deimos</name>
-            <description></description>
-            <discovery_date>1789-08-28</discovery_date>
+            <description>Deimos is the smaller and outermost of the 
+                two natural satellites of the planet Mars, the other 
+                being Phobos.</description>
+            <discovery_date>1877-08-12</discovery_date>
             <parameters>
-                <apoapsis>405400</apoapsis>
-                <peryapsis>362000</peryapsis>
-                <inclination>5.145</inclination>
+                <apoapsis>23455</apoapsis>
+                <peryapsis>23470</peryapsis>
+                <inclination>0.93</inclination>
             </parameters>
-            <last_mission id="M1" />
         </satellite>
+
+        <satellite id="PHO" body="MARS">
+            <name>Phobos</name>
+            <description>Phobos is the innermost and larger of the 
+                two natural satellites of Mars.</description>
+            <discovery_date>1877-08-18</discovery_date>
+            <parameters>
+                <apoapsis>9517</apoapsis>
+                <peryapsis>9234</peryapsis>
+                <inclination>1.093</inclination>
+            </parameters>
+        </satellite>
+        
+        <satellite id="CAL" body="JUPITER">
+            <name>Callisto</name>
+            <description>Callisto is the second-largest moon 
+                of Jupiter, after Ganymede.</description>
+            <discovery_date>1610</discovery_date>
+            <parameters>
+                <apoapsis>1869000</apoapsis>
+                <peryapsis>1897000</peryapsis>
+                <inclination>2.017</inclination>
+            </parameters>
+        </satellite>
+
+        <satellite id="EUR" body="JUPITER">
+            <name>Europa</name>
+            <description>Europa is the smallest of the four
+                Galilean moons orbiting Jupiter.</description>
+            <discovery_date>1610</discovery_date>
+            <parameters>
+                <apoapsis>676938</apoapsis>
+                <peryapsis>664862</peryapsis>
+                <inclination>0.470</inclination>
+            </parameters>
+        </satellite>
+
+        <satellite id="GAN" body="JUPITER">
+            <name>Ganymede</name>
+            <description>Ganymede is the largest and most massive
+                moon of Jupiter and in the Solar System.</description>
+            <discovery_date>1610-01-06</discovery_date>
+            <parameters>
+                <apoapsis>1071600</apoapsis>
+                <peryapsis>1069200</peryapsis>
+                <inclination>2.214</inclination>
+            </parameters>
+        </satellite>
+
+        <satellite id="IO" body="JUPITER">
+            <name>Io</name>
+            <description>Ganymede Io was first discovered by Galileo 
+                in 1610, making it one of the Galilean Satellites.</description>
+            <discovery_date>1610</discovery_date>
+            <parameters>
+                <apoapsis>423400</apoapsis>
+                <peryapsis>420000</peryapsis>
+                <inclination>0.05</inclination>
+            </parameters>
+        </satellite>
+
     </satellites>
 
     <missions>

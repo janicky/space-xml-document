@@ -16,7 +16,7 @@
 <!ELEMENT planet (name, symbol, description, discovery_date?, parameters, last_mission?)>
 <!ELEMENT symbol (#PCDATA)>
 <!ATTLIST planet id ID #REQUIRED
-                 typology (gas_giant|ice_giant|ocean_planet|gas_dwarf) #IMPLIED 
+                 typology (gas_giant|ice_giant|ocean_planet|gas_dwarf|rocky_planet) #IMPLIED 
                  satellites IDREFS #IMPLIED>
 
 <!-- Satellites -->
