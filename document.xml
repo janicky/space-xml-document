@@ -100,13 +100,25 @@
         <planet id="URANUS" typology="ice_giant">
             <name>Uranus</name>
             <symbol>⛢</symbol>
-            <description> It has the third-largest planetary radius and fourth-largest 
+            <description>It has the third-largest planetary radius and fourth-largest 
                 planetary mass in the Solar System. Uranus is similar in composition to Neptune.</description>
             <parameters>
                 <apoapsis>3003620000000</apoapsis>
                 <periapsis>2741300000000</periapsis>
                 <inclination>6.48</inclination>
                 <orbital_period type="years">84.020</orbital_period>
+            </parameters>
+        </planet>
+        <planet id="NEPTUNE" typology="ice_giant">
+            <name>Neptune</name>
+            <symbol>♆</symbol>
+            <description>Neptune is 17 times the mass of Earth, slightly more massive 
+                than its near-twin Uranus. Neptune is denser and physically smaller than Uranus.</description>
+            <parameters>
+                <apoapsis>4545670000000</apoapsis>
+                <periapsis>4444450000000</periapsis>
+                <inclination>6.43</inclination>
+                <orbital_period type="years">164.8</orbital_period>
             </parameters>
         </planet>
         <planet id="TRAPPIST1E" typology="rocky_planet">
