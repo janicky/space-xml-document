@@ -254,6 +254,17 @@
                 <inclination>0.05</inclination>
             </parameters>
         </satellite>
+        <satellite id="TIT" body="SATURN">
+            <name>Titan</name>
+            <description>Titan is the largest moon of Saturn and 
+                the second-largest natural satellite in the Solar System.</description>
+            <discovery_date>1655-03-25</discovery_date>
+            <parameters>
+                <apoapsis>1257060</apoapsis>
+                <periapsis>1186680</periapsis>
+                <inclination>0.348</inclination>
+            </parameters>
+        </satellite>
     </satellites>
 
 <!-- MISSIONS -->

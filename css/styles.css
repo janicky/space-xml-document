@@ -96,13 +96,13 @@ orbital_period[type=days]:after {
     content: " days";
 }
 detection_method:before {
-    content: "Detection method: ";
+    content: "Detection: ";
 }
 
 parameters > * {
     position: relative;
     display: block;
-    padding: 5px 5px 5px 150px;
+    padding: 5px 5px 5px 120px;
 }
 
 parameters > *:before {
