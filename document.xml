@@ -121,17 +121,17 @@
                 <orbital_period type="years">164.8</orbital_period>
             </parameters>
         </planet>
-        <planet id="TRAPPIST1E" typology="rocky_planet">
-            <name>Trappist 1e</name>
-            <symbol></symbol>
-            <description>Trappist 1e is a planetary system consisting of seven planets 
-                orbiting an ultra-cool dwarf star, called TRAPPIST-1.</description>
-            <discovery_date>2017-02-22</discovery_date>
+        <planet id="TRAPPIST1B">
+            <name>Trappist 1b</name>
+            <description>Is a mainly rocky exoplanet orbiting around the ultra-cold 
+                dwarf star TRAPPIST-1, located approximately 39 light-years away from Earth.</description>
+            <discovery_date>2016-05-02</discovery_date>
             <parameters>
-                <apoapsis></apoapsis>
-                <periapsis></periapsis>
-                <inclination>89.860</inclination>
-                <orbital_period type="days">6</orbital_period>
+                <apoapsis>1738327</apoapsis>
+                <periapsis>1716785</periapsis>
+                <inclination>89.56</inclination>
+                <orbital_period type="days">1.510</orbital_period>
+                <detection_method>Transit</detection_method>
             </parameters>
         </planet>
     </planets>
