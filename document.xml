@@ -5,7 +5,8 @@
 <space>
     <details>
         <title>Planets and satellites</title>
-        <description>Document contains planets, their satellites and optionally missions.</description>
+        <description>Document contains planets, their satellites 
+            and optionally missions.</description>
         <authors>
             <author>
                 <id>211807</id>
@@ -22,9 +23,12 @@
     <!-- struktura z danymi -->
     <!-- słownikowymi -->
     <!-- identyfikatory id="1" -->
-    <!-- Mars, Jupiter (galileuszowe), Saturn (pasterskie + Enceladus), 
-    Trappist 1e (bez księżyców), Proxima Centauri B (bez księżyców)  -->
-    <!-- Misja Opportunity, Curiosity -->
+    <!--    Mars, 
+            Jupiter (galileuszowe), 
+            Saturn (pasterskie + Enceladus), 
+            Trappist 1e (bez księżyców), 
+            Proxima Centauri B (bez księżyców)  -->
+    <!--✓   Misja Opportunity, Curiosity -->
     <planets>
         <planet id="EARTH" satellites="LUN">
             <name>Earth</name>
@@ -37,6 +41,21 @@
                 <orbital_period type="years">11.862</orbital_period>
             </parameters>
         </planet>
+        
+        <planet id="MARS" topology="rocky_planet" satellites="DEI|PHO">
+            <name>Mars</name>
+            <symbol></symbol>
+            <description>Mars is the fourth planet from the Sun and the 
+                second-smallest planet in the Solar System after Mercury.</description>
+            <parameters>
+                <apoapsis>249200000</apoapsis>
+                <peryapsis>206700000</peryapsis>
+                <inclination>5,65</inclination>
+                <orbital_period type="days">687</orbital_period>
+            </parameters>
+            <last_mission id="M2" />
+        </planet>
+
     </planets>
 
     <!-- struktura z danymi -->
@@ -56,6 +75,20 @@
         </satellite>
     </satellites>
 
+    <satellites>
+        <satellite id="DEI" body="MARS">
+            <name>Deimos</name>
+            <description></description>
+            <discovery_date>1789-08-28</discovery_date>
+            <parameters>
+                <apoapsis>405400</apoapsis>
+                <peryapsis>362000</peryapsis>
+                <inclination>5.145</inclination>
+            </parameters>
+            <last_mission id="M1" />
+        </satellite>
+    </satellites>
+
     <missions>
         <mission id="M1">
             <name>Apollo XI</name>
@@ -64,6 +97,22 @@
                 Armstrong and lunar module pilot Buzz Aldrin, both
                 American, landed the Apollo Lunar Module Eagle on
                 July 20, 1969, at 20:17 UTC. </description>
+        </mission>
+
+        <mission id="M2">
+            <name>Opportunity</name>
+            <description>Opportunity was the second of the two 
+                rovers launched in 2003 to land on Mars and begin traversing
+                the Red Planet in search of signs of past life. The rover is
+                still actively exploring the Martian terrain, having far
+                outlasted her planned 90-day mission. </description>
+        </mission>
+
+        <mission id="M3">
+            <name>Curiosity</name>
+            <description>Curiosity is a car-sized rover designed to 
+                explore the craterGale on Mars as part of NASA's Mars
+                Science Laboratory mission (MSL). </description>
         </mission>
     </missions>
 </space>
