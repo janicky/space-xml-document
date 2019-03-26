@@ -177,6 +177,17 @@
 
 <!-- SATELLITES -->
     <satellites>
+        <satellite id="MOON" body="EARTH">
+            <name>Moon</name>
+            <description>The Moon is an astronomical body that orbits planet Earth 
+                        and is Earth's only permanent natural satellite.</description>
+            <parameters>
+                <apoapsis>405400</apoapsis>
+                <periapsis>362600</periapsis>
+                <inclination>5.145</inclination>
+            </parameters>
+            <last_mission id="M1" />
+        </satellite>
         <satellite id="DEI" body="MARS">
             <name>Deimos</name>
             <description>Deimos is the smaller and outermost of the 
@@ -286,17 +297,6 @@
                 <apoapsis>15064000</apoapsis>
                 <periapsis>10832000</periapsis>
                 <inclination>151.78</inclination>
-            </parameters>
-            <last_mission id="M1" />
-        </satellite>
-        <satellite id="MOON" body="EARTH">
-            <name>Moon</name>
-            <description>The Moon is an astronomical body that orbits planet Earth 
-                and is Earth's only permanent natural satellite.</description>
-            <parameters>
-                <apoapsis>405400</apoapsis>
-                <periapsis>362600</periapsis>
-                <inclination>5.145</inclination>
             </parameters>
             <last_mission id="M1" />
         </satellite>
