@@ -67,6 +67,68 @@ space > details authors author id:after {
 }
 
 /*
+* === PLANETS AND SATELLITES ===
+*/
+
+apoapsis:before {
+    content: "Apoapsis: ";
+}
+periapsis:before {
+    content: "Periapsis: ";
+}
+apoapsis:after,
+periapsis:after {
+    content: " km";
+}
+inclination:before {
+    content: "Inclination: ";
+}
+inclination:after {
+    content: "°";
+}
+orbital_period:before {
+    content: "Orbital period: ";
+}
+orbital_period[type=years]:after {
+    content: " years";
+}
+orbital_period[type=days]:after {
+    content: " days";
+}
+
+parameters > * {
+    position: relative;
+    display: block;
+    padding: 5px 5px 5px 110px;
+}
+
+parameters > *:before {
+    opacity: .6;
+    position: absolute;
+    left: 0;
+}
+
+parameters > *:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+discovery_date {
+    position: absolute;
+    background-color: #4d5558;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    right: -20px;
+    transform: translateY(-30px);
+}
+
+discovery_date:before {
+    content: "Discovery date: ";
+    margin-right: 5px;
+    color: rgba(255, 255, 255, .6);
+}
+
+/*
 * === PLANETS ===
 */
 planets:before {
@@ -171,6 +233,7 @@ satellites {
 
 satellites satellite {
     background-color: rgba(0, 0, 0, .5);
+    border: 2px solid #4d5558;
     position: relative;
     padding: 20px;
     width: calc(25% - 40px);
@@ -200,48 +263,8 @@ satellites satellite > description {
     color: rgba(255, 255, 255, .7);
 }
 
-/*
-* === PLANETS AND SATELLITES ===
-*/
-
-apoapsis:before {
-    content: "Apoapsis: ";
-}
-periapsis:before {
-    content: "Periapsis: ";
-}
-apoapsis:after,
-periapsis:after {
-    content: " km";
-}
-inclination:before {
-    content: "Inclination: ";
-}
-inclination:after {
-    content: "°";
-}
-orbital_period:before {
-    content: "Orbital period: ";
-}
-orbital_period[type=years]:after {
-    content: " years";
-}
-orbital_period[type=days]:after {
-    content: " days";
+satellites satellite > discovery_date {
+    background-color: #000;
+    border: 2px solid #4d5558;
 }
 
-parameters > * {
-    position: relative;
-    display: block;
-    padding: 5px 5px 5px 110px;
-}
-
-parameters > *:before {
-    opacity: .6;
-    position: absolute;
-    left: 0;
-}
-
-parameters > *:not(:last-child) {
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
-}
