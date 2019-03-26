@@ -265,6 +265,18 @@
             </parameters>
             <last_mission id="M1" />
         </satellite>
+        <satellite id="MIM" body="SATURN">
+            <name>Mimas</name>
+            <description>With a diameter of 396 km it is the smallest astronomical body that is known 
+                to be rounded in shape because of self-gravitation.</description>
+            <discovery_date>1789-09-17</discovery_date>
+            <parameters>
+                <apoapsis>181902</apoapsis>
+                <periapsis>189176</periapsis>
+                <inclination>1.574</inclination>
+            </parameters>
+            <last_mission id="M1" />
+        </satellite>
         <satellite id="ENC" body="SATURN">
             <name>Enceladus</name>
             <description>Enceladus is mostly covered by fresh, clean ice, making it 
