@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="styles.css"?>
+<!DOCTYPE space SYSTEM "space.dtd">
+
+<space>
+    <details>
+        <title>Planets and satellites</title>
+        <description>Document contains planets, their satellites and optionally missions.</description>
+        <authors>
+            <author>
+                <id>211807</id>
+                <first_name>Konrad</first_name>
+                <last_name>Jachimstal</last_name>
+            </author>
+            <author>
+                <id>211951</id>
+                <first_name>Patryk</first_name>
+                <last_name>Janicki</last_name>
+            </author>
+        </authors>
+    </details>
+    <!-- struktura z danymi -->
+    <!-- słownikowymi -->
+    <!-- identyfikatory id="1" -->
+    <!-- Mars, Jupiter (galileuszowe), Saturn (pasterskie + Enceladus), 
+    Trappist 1e (bez księżyców), Proxima Centauri B (bez księżyców)  -->
+    <!-- Misja Opportunity, Curiosity -->
+    <planets>
+        <planet id="EARTH" satellites="LUN">
+            <name>Earth</name>
+            <symbol>⊕</symbol>
+            <description></description>
+            <parameters>
+                <apoapsis>152100000</apoapsis>
+                <peryapsis>147095000</peryapsis>
+                <inclination>7.155</inclination>
+                <orbital_period type="years">11.862</orbital_period>
+            </parameters>
+        </planet>
+    </planets>
+
+    <!-- struktura z danymi -->
+    <!-- istotnymi - elementy -->
+    <!-- referncja do identyfikatorów (ref) -->
+    <satellites>
+        <satellite id="LUN" body="EARTH">
+            <name>Lunar</name>
+            <description></description>
+            <discovery_date>1789-08-28</discovery_date>
+            <parameters>
+                <apoapsis>405400</apoapsis>
+                <peryapsis>362000</peryapsis>
+                <inclination>5.145</inclination>
+            </parameters>
+            <last_mission id="M1" />
+        </satellite>
+    </satellites>
+
+    <missions>
+        <mission id="M1">
+            <name>Apollo XI</name>
+            <description>Apollo 11 was the spaceflight that landed
+                the first two people on the Moon. Commander Neil
+                Armstrong and lunar module pilot Buzz Aldrin, both
+                American, landed the Apollo Lunar Module Eagle on
+                July 20, 1969, at 20:17 UTC. </description>
+        </mission>
+    </missions>
+</space>

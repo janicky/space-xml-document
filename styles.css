@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Gugi|Roboto+Condensed:300,300i,400,700');
+
+space, planets, space > details, name, title,
+details > description {
+    display: block;
+}
+
+details title {
+    font-size: 2rem;
+}
+
+details description {
+    padding: 20px 0;
+}
+details description:before {
+    content: "Description: ";
+}
+
+space {
+    background-color: #0b1c4b;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+space > details {
+    background-color: #fff;
+    padding: 30px;
+}
+
+space > details authors {
+    display: flex;
+}
+
+space > details authors author {
+    display: block;
+    background-color: rgba(0, 0, 0, .15);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+space > details authors author property[type="lastName"] {
+    border-right: 1px dotted rgba(0, 0, 0, .4);
+    padding-right: 8px;
+    margin-right: 5px;
+}
+
+planets {
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+planets planet {
+    margin: 15px;
+    padding: 20px;
+    width: 25%;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+planets planet:after {
+    position: absolute;
+    background-color: red;
+    content: counter;
+}
+
+planets planet > name {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 0.05rem;
+    font-family: 'Gugi', serif;
+
+}
+
+planets planet > symbol {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+planets planet details > * {
+    display: block;
+    font-weight: 100;
+}

@@ -1,0 +1,48 @@
+<!ELEMENT space (details, planets, satellites, missions?)>
+
+<!-- Details definition -->
+<!ELEMENT details (title, description, authors)>
+<!ELEMENT title (#PCDATA)>
+
+<!-- Authors definition -->
+<!ELEMENT authors (author+)>
+<!ELEMENT author (id, first_name, last_name)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>
+
+<!-- Planets -->
+<!ELEMENT planets (planet+)>
+<!ELEMENT planet (name, symbol, description, discovery_date?, parameters, last_mission?)>
+<!ELEMENT symbol (#PCDATA)>
+<!ATTLIST planet id ID #REQUIRED
+                 typology (gas_giant|ice_giant|ocean_planet|gas_dwarf) #IMPLIED 
+                 satellites IDREFS #IMPLIED>
+
+<!-- Satellites -->
+<!ELEMENT satellites (satellite+)>
+<!ELEMENT satellite (name, description, discovery_date?, parameters, last_mission?)>
+<!ATTLIST satellite id ID #REQUIRED
+                    body IDREF #REQUIRED>
+
+<!-- Missions -->
+<!ELEMENT missions (mission*)>
+<!ELEMENT mission (name, description)>
+<!ATTLIST mission id ID #REQUIRED>
+
+<!-- Details, planets and satellites -->
+<!ELEMENT description (#PCDATA)>
+
+<!-- Planets and satellites -->
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT discovery_date (#PCDATA)>
+<!ELEMENT parameters (apoapsis, peryapsis, inclination, orbital_period?)>
+<!ELEMENT apoapsis (#PCDATA)>
+<!ELEMENT peryapsis (#PCDATA)>
+<!ELEMENT inclination (#PCDATA)>
+
+<!ELEMENT orbital_period (#PCDATA)>
+<!ATTLIST orbital_period type (days|years) #REQUIRED>
+
+<!ELEMENT last_mission EMPTY>
+<!ATTLIST last_mission id IDREF #REQUIRED>
