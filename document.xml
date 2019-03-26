@@ -33,7 +33,9 @@
         <planet id="EARTH" satellites="LUN">
             <name>Earth</name>
             <symbol>⊕</symbol>
-            <description></description>
+            <description>Earth is the third planet 
+                from the Sun and the only astronomical 
+                object known to harbor life.</description>
             <parameters>
                 <apoapsis>152100000</apoapsis>
                 <peryapsis>147095000</peryapsis>
@@ -73,8 +75,7 @@
             <name>Trappist 1e</name>
             <symbol></symbol>
             <description>Trappist 1e is a planetary system consisting of seven planets 
-                orbiting an ultra-cool dwarf star, called TRAPPIST-1, about 40 
-                light-years away in the Aquarius constellation.</description>
+                orbiting an ultra-cool dwarf star, called TRAPPIST-1.</description>
             <discovery_date>2017-02-22</discovery_date>
             <parameters>
                 <apoapsis></apoapsis>
