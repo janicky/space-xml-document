@@ -36,9 +36,9 @@
 <!-- Planets and satellites -->
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT discovery_date (#PCDATA)>
-<!ELEMENT parameters (apoapsis, peryapsis, inclination, orbital_period?)>
+<!ELEMENT parameters (apoapsis, periapsis, inclination, orbital_period?)>
 <!ELEMENT apoapsis (#PCDATA)>
-<!ELEMENT peryapsis (#PCDATA)>
+<!ELEMENT periapsis (#PCDATA)>
 <!ELEMENT inclination (#PCDATA)>
 
 <!ELEMENT orbital_period (#PCDATA)>

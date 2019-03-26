@@ -38,7 +38,7 @@
                 object known to harbor life.</description>
             <parameters>
                 <apoapsis>152100000</apoapsis>
-                <peryapsis>147095000</peryapsis>
+                <periapsis>147095000</periapsis>
                 <inclination>7.155</inclination>
                 <orbital_period type="years">11.862</orbital_period>
             </parameters>
@@ -51,7 +51,7 @@
                 second-smallest planet in the Solar System after Mercury.</description>
             <parameters>
                 <apoapsis>249200000</apoapsis>
-                <peryapsis>206700000</peryapsis>
+                <periapsis>206700000</periapsis>
                 <inclination>5,65</inclination>
                 <orbital_period type="days">687</orbital_period>
             </parameters>
@@ -65,7 +65,7 @@
                 the largest in the Solar System.</description>
             <parameters>
                 <apoapsis>816620000</apoapsis>
-                <peryapsis>740520000</peryapsis>
+                <periapsis>740520000</periapsis>
                 <inclination>6.09</inclination>
                 <orbital_period type="days">4332</orbital_period>
             </parameters>
@@ -79,7 +79,7 @@
             <discovery_date>2017-02-22</discovery_date>
             <parameters>
                 <apoapsis></apoapsis>
-                <peryapsis></peryapsis>
+                <periapsis></periapsis>
                 <inclination>89.860</inclination>
                 <orbital_period type="days">6</orbital_period>
             </parameters>
@@ -97,7 +97,7 @@
             <discovery_date>1789-08-28</discovery_date>
             <parameters>
                 <apoapsis>405400</apoapsis>
-                <peryapsis>362000</peryapsis>
+                <periapsis>362000</periapsis>
                 <inclination>5.145</inclination>
             </parameters>
             <last_mission id="M1" />
@@ -110,7 +110,7 @@
             <discovery_date>1877-08-12</discovery_date>
             <parameters>
                 <apoapsis>23455</apoapsis>
-                <peryapsis>23470</peryapsis>
+                <periapsis>23470</periapsis>
                 <inclination>0.93</inclination>
             </parameters>
         </satellite>
@@ -121,7 +121,7 @@
             <discovery_date>1877-08-18</discovery_date>
             <parameters>
                 <apoapsis>9517</apoapsis>
-                <peryapsis>9234</peryapsis>
+                <periapsis>9234</periapsis>
                 <inclination>1.093</inclination>
             </parameters>
         </satellite>
@@ -133,7 +133,7 @@
             <discovery_date>1610</discovery_date>
             <parameters>
                 <apoapsis>1869000</apoapsis>
-                <peryapsis>1897000</peryapsis>
+                <periapsis>1897000</periapsis>
                 <inclination>2.017</inclination>
             </parameters>
         </satellite>
@@ -145,7 +145,7 @@
             <discovery_date>1610</discovery_date>
             <parameters>
                 <apoapsis>676938</apoapsis>
-                <peryapsis>664862</peryapsis>
+                <periapsis>664862</periapsis>
                 <inclination>0.470</inclination>
             </parameters>
         </satellite>
@@ -157,7 +157,7 @@
             <discovery_date>1610-01-06</discovery_date>
             <parameters>
                 <apoapsis>1071600</apoapsis>
-                <peryapsis>1069200</peryapsis>
+                <periapsis>1069200</periapsis>
                 <inclination>2.214</inclination>
             </parameters>
         </satellite>
@@ -169,7 +169,7 @@
             <discovery_date>1610</discovery_date>
             <parameters>
                 <apoapsis>423400</apoapsis>
-                <peryapsis>420000</peryapsis>
+                <periapsis>420000</periapsis>
                 <inclination>0.05</inclination>
             </parameters>
         </satellite>
