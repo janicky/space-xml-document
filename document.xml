@@ -24,11 +24,23 @@
 
 <!-- PLANETS -->
     <planets>
+        <planet id="MERCURY" typology="rocky_planet">
+            <name>Mercury</name>
+            <symbol>☿</symbol>
+            <description>Mercury is the smallest and innermost planet in the Solar System.
+                It is named after the Roman deity Mercury.</description>
+            <parameters>
+                <apoapsis>69816900</apoapsis>
+                <periapsis>46001200</periapsis>
+                <inclination>3.38</inclination>
+                <orbital_period type="days">87.969</orbital_period>
+            </parameters>
+        </planet>
         <planet id="VENUS" typology="rocky_planet">
             <name>Venus</name>
             <symbol>♀</symbol>
             <description>It has the longest rotation period of any planet in 
-                the Solar System and rotates in the opposite direction to most other planets</description>
+                the Solar System and rotates in the opposite direction to most other planets.</description>
             <parameters>
                 <apoapsis>108939000</apoapsis>
                 <periapsis>107477000</periapsis>
@@ -77,7 +89,7 @@
             <name>Saturn</name>
             <symbol>♄</symbol>
             <description>Saturn is the sixth planet from the Sun 
-                                and the second-largest in the Solar System, after Jupiter.</description>
+                and the second-largest in the Solar System, after Jupiter.</description>
             <parameters>
                 <apoapsis>1514500000</apoapsis>
                 <periapsis>1352550000</periapsis>
