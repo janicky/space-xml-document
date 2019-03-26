@@ -3,6 +3,7 @@
 <!DOCTYPE space SYSTEM "space.dtd">
 
 <space>
+<!-- DETAILS -->
     <details>
         <title>Planets and satellites</title>
         <description>Document contains planets, their satellites 
@@ -20,30 +21,21 @@
             </author>
         </authors>
     </details>
-    <!-- struktura z danymi -->
-    <!-- słownikowymi -->
-    <!-- identyfikatory id="1" -->
-    <!-- ✓   Mars, 
-         ✓   Jupiter (galileuszowe), 
-            Saturn (pasterskie + Enceladus), 
-         ✓   Trappist 1e (bez księżyców), 
-            Proxima Centauri B (bez księżyców) 
-         ✓   Misja Opportunity, Curiosity -->
+
+<!-- PLANETS -->
     <planets>
-        <planet id="EARTH" satellites="LUN">
+        <planet id="EARTH" typology="rocky_planet" satellites="DEI PHO">
             <name>Earth</name>
-            <symbol>⊕</symbol>
-            <description>Earth is the third planet 
-                from the Sun and the only astronomical 
-                object known to harbor life.</description>
+            <symbol>♁</symbol>
+            <description>According to radiometric dating and other sources 
+                of evidence, Earth formed over 4.5 billion years ago.</description>
             <parameters>
                 <apoapsis>152100000</apoapsis>
                 <periapsis>147095000</periapsis>
                 <inclination>7.155</inclination>
-                <orbital_period type="years">11.862</orbital_period>
+                <orbital_period type="days">365.256</orbital_period>
             </parameters>
         </planet>
-        
         <planet id="MARS" typology="rocky_planet" satellites="DEI PHO">
             <name>Mars</name>
             <symbol>♂</symbol>
@@ -52,12 +44,11 @@
             <parameters>
                 <apoapsis>249200000</apoapsis>
                 <periapsis>206700000</periapsis>
-                <inclination>5,65</inclination>
+                <inclination>5.65</inclination>
                 <orbital_period type="days">687</orbital_period>
             </parameters>
             <last_mission id="M3" />
         </planet>
-
         <planet id="JUPITER" typology="gas_giant" satellites="CAL EUR GAN IO">
             <name>Jupiter</name>
             <symbol>♃</symbol>
@@ -70,7 +61,18 @@
                 <orbital_period type="days">4332</orbital_period>
             </parameters>
         </planet>
-
+        <planet id="SATURN" satellites="ENC">
+            <name>Saturn</name>
+            <symbol>♄</symbol>
+            <description>Saturn is the sixth planet from the Sun 
+                                and the second-largest in the Solar System, after Jupiter.</description>
+            <parameters>
+                <apoapsis>1514500000</apoapsis>
+                <periapsis>1352550000</periapsis>
+                <inclination>5.51</inclination>
+                <orbital_period type="years">29.4571</orbital_period>
+            </parameters>
+        </planet>
         <planet id="TRAPPIST1E" typology="rocky_planet">
             <name>Trappist 1e</name>
             <symbol></symbol>
@@ -84,21 +86,19 @@
                 <orbital_period type="days">6</orbital_period>
             </parameters>
         </planet>
-
     </planets>
 
-    <!-- struktura z danymi -->
-    <!-- istotnymi - elementy -->
-    <!-- referncja do identyfikatorów (ref) -->
+<!-- SATELLITES -->
     <satellites>
-        <satellite id="LUN" body="EARTH">
-            <name>Lunar</name>
-            <description></description>
+        <satellite id="ENC" body="SATURN">
+            <name>Enceladus</name>
+            <description>Enceladus is mostly covered by fresh, clean ice, making it 
+                one of the most reflective bodies of the Solar System.</description>
             <discovery_date>1789-08-28</discovery_date>
             <parameters>
-                <apoapsis>405400</apoapsis>
-                <periapsis>362000</periapsis>
-                <inclination>5.145</inclination>
+                <apoapsis>239160</apoapsis>
+                <periapsis>236920</periapsis>
+                <inclination>0.009</inclination>
             </parameters>
             <last_mission id="M1" />
         </satellite>
@@ -125,7 +125,6 @@
                 <inclination>1.093</inclination>
             </parameters>
         </satellite>
-        
         <satellite id="CAL" body="JUPITER">
             <name>Callisto</name>
             <description>Callisto is the second-largest moon 
@@ -137,19 +136,16 @@
                 <inclination>2.017</inclination>
             </parameters>
         </satellite>
-
         <satellite id="EUR" body="JUPITER">
             <name>Europa</name>
             <description>Europa is the smallest of the four
                 Galilean moons orbiting Jupiter.</description>
-            <discovery_date>1610</discovery_date>
             <parameters>
                 <apoapsis>676938</apoapsis>
                 <periapsis>664862</periapsis>
                 <inclination>0.470</inclination>
             </parameters>
         </satellite>
-
         <satellite id="GAN" body="JUPITER">
             <name>Ganymede</name>
             <description>Ganymede is the largest and most massive
@@ -161,21 +157,19 @@
                 <inclination>2.214</inclination>
             </parameters>
         </satellite>
-
         <satellite id="IO" body="JUPITER">
             <name>Io</name>
             <description>Ganymede Io was first discovered by Galileo 
                 in 1610, making it one of the Galilean Satellites.</description>
-            <discovery_date>1610</discovery_date>
             <parameters>
                 <apoapsis>423400</apoapsis>
                 <periapsis>420000</periapsis>
                 <inclination>0.05</inclination>
             </parameters>
         </satellite>
-
     </satellites>
 
+<!-- MISSIONS -->
     <missions>
         <mission id="M1">
             <name>Apollo XI</name>
