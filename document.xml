@@ -203,7 +203,7 @@
         <satellite id="IO" body="JUPITER">
             <name>Io</name>
             <description>Io was first discovered by Galileo 
-                        in 1610, making it one of the Galilean Satellites.</description>
+                in 1610, making it one of the Galilean Satellites.</description>
             <parameters>
                 <apoapsis>423400</apoapsis>
                 <periapsis>420000</periapsis>
@@ -234,7 +234,7 @@
         <satellite id="CAL" body="JUPITER">
             <name>Callisto</name>
             <description>Callisto is the second-largest moon 
-                        of Jupiter, after Ganymede.</description>
+                of Jupiter, after Ganymede.</description>
             <discovery_date>1610</discovery_date>
             <parameters>
                 <apoapsis>1869000</apoapsis>
@@ -274,6 +274,29 @@
                 <apoapsis>181902</apoapsis>
                 <periapsis>189176</periapsis>
                 <inclination>1.574</inclination>
+            </parameters>
+            <last_mission id="M1" />
+        </satellite>
+        <satellite id="PHB" body="SATURN">
+            <name>Phoebe</name>
+            <description>is an irregular satellite of Saturn with a mean diameter of 213 km. 
+                It was discovered by William Henry Pickering.</description>
+            <discovery_date>1899-03-17</discovery_date>
+            <parameters>
+                <apoapsis>15064000</apoapsis>
+                <periapsis>10832000</periapsis>
+                <inclination>151.78</inclination>
+            </parameters>
+            <last_mission id="M1" />
+        </satellite>
+        <satellite id="MOON" body="EARTH">
+            <name>Moon</name>
+            <description>The Moon is an astronomical body that orbits planet Earth 
+                and is Earth's only permanent natural satellite.</description>
+            <parameters>
+                <apoapsis>405400</apoapsis>
+                <periapsis>362600</periapsis>
+                <inclination>5.145</inclination>
             </parameters>
             <last_mission id="M1" />
         </satellite>
