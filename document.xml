@@ -131,7 +131,20 @@
                 <periapsis>1716785</periapsis>
                 <inclination>89.56</inclination>
                 <orbital_period type="days">1.510</orbital_period>
-                <detection_method>Transit</detection_method>
+                <detection_method>transit</detection_method>
+            </parameters>
+        </planet>
+        <planet id="TRAPPIST1D">
+            <name>Trappist 1d</name>
+            <description>Is a small exoplanet, which orbits on the inner edge of the 
+                habitable zone of the ultracool dwarf star TRAPPIST-1.</description>
+            <discovery_date>2016-05-02</discovery_date>
+            <parameters>
+                <apoapsis>3361015</apoapsis>
+                <periapsis>3305215</periapsis>
+                <inclination>89.89</inclination>
+                <orbital_period type="days">4.050</orbital_period>
+                <detection_method>transit</detection_method>
             </parameters>
         </planet>
     </planets>
