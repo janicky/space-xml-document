@@ -160,6 +160,19 @@
                 <detection_method>radial velocity</detection_method>
             </parameters>
         </planet>
+        <planet id="VIRGINISB">
+            <name>61 Virginis b</name>
+            <description>Is an extrasolar planet, orbiting the 5th magnitude G-type 
+                star 61 Virginis, in Virgo. This planet has a minimum mass of 5.1 times that of Earth.</description>
+            <discovery_date>2009-12-14</discovery_date>
+            <parameters>
+                <apoapsis>8401865</apoapsis>
+                <periapsis>6618060</periapsis>
+                <inclination>0.0</inclination>
+                <orbital_period type="days">4.215</orbital_period>
+                <detection_method>radial velocity</detection_method>
+            </parameters>
+        </planet>
     </planets>
 
 <!-- SATELLITES -->
