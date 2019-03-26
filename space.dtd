@@ -36,7 +36,7 @@
 <!-- Planets and satellites -->
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT discovery_date (#PCDATA)>
-<!ELEMENT parameters (apoapsis, periapsis, inclination, orbital_period?)>
+<!ELEMENT parameters (apoapsis, periapsis, inclination, orbital_period?, detection_method?)>
 <!ELEMENT apoapsis (#PCDATA)>
 <!ELEMENT periapsis (#PCDATA)>
 <!ELEMENT inclination (#PCDATA)>
@@ -46,3 +46,5 @@
 
 <!ELEMENT last_mission EMPTY>
 <!ATTLIST last_mission id IDREF #REQUIRED>
+
+<!ELEMENT detection_method (#PCDATA)>
