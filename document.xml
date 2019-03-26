@@ -177,18 +177,6 @@
 
 <!-- SATELLITES -->
     <satellites>
-        <satellite id="ENC" body="SATURN">
-            <name>Enceladus</name>
-            <description>Enceladus is mostly covered by fresh, clean ice, making it 
-                one of the most reflective bodies of the Solar System.</description>
-            <discovery_date>1789-08-28</discovery_date>
-            <parameters>
-                <apoapsis>239160</apoapsis>
-                <periapsis>236920</periapsis>
-                <inclination>0.009</inclination>
-            </parameters>
-            <last_mission id="M1" />
-        </satellite>
         <satellite id="DEI" body="MARS">
             <name>Deimos</name>
             <description>Deimos is the smaller and outermost of the 
@@ -212,15 +200,14 @@
                 <inclination>1.093</inclination>
             </parameters>
         </satellite>
-        <satellite id="CAL" body="JUPITER">
-            <name>Callisto</name>
-            <description>Callisto is the second-largest moon 
-                of Jupiter, after Ganymede.</description>
-            <discovery_date>1610</discovery_date>
+        <satellite id="IO" body="JUPITER">
+            <name>Io</name>
+            <description>Io was first discovered by Galileo 
+                        in 1610, making it one of the Galilean Satellites.</description>
             <parameters>
-                <apoapsis>1869000</apoapsis>
-                <periapsis>1897000</periapsis>
-                <inclination>2.017</inclination>
+                <apoapsis>423400</apoapsis>
+                <periapsis>420000</periapsis>
+                <inclination>0.05</inclination>
             </parameters>
         </satellite>
         <satellite id="EUR" body="JUPITER">
@@ -244,14 +231,15 @@
                 <inclination>2.214</inclination>
             </parameters>
         </satellite>
-        <satellite id="IO" body="JUPITER">
-            <name>Io</name>
-            <description>Io was first discovered by Galileo 
-                in 1610, making it one of the Galilean Satellites.</description>
+        <satellite id="CAL" body="JUPITER">
+            <name>Callisto</name>
+            <description>Callisto is the second-largest moon 
+                        of Jupiter, after Ganymede.</description>
+            <discovery_date>1610</discovery_date>
             <parameters>
-                <apoapsis>423400</apoapsis>
-                <periapsis>420000</periapsis>
-                <inclination>0.05</inclination>
+                <apoapsis>1869000</apoapsis>
+                <periapsis>1897000</periapsis>
+                <inclination>2.017</inclination>
             </parameters>
         </satellite>
         <satellite id="TIT" body="SATURN">
@@ -264,6 +252,30 @@
                 <periapsis>1186680</periapsis>
                 <inclination>0.348</inclination>
             </parameters>
+        </satellite>
+        <satellite id="RHE" body="SATURN">
+            <name>Rhea</name>
+            <description>Is the second-largest moon of Saturn and the ninth-largest moon in the Solar System. 
+                It is the second smallest body in the Solar System.</description>
+            <discovery_date>1672-12-23</discovery_date>
+            <parameters>
+                <apoapsis>527170</apoapsis>
+                <periapsis>526960</periapsis>
+                <inclination>0.345</inclination>
+            </parameters>
+            <last_mission id="M1" />
+        </satellite>
+        <satellite id="ENC" body="SATURN">
+            <name>Enceladus</name>
+            <description>Enceladus is mostly covered by fresh, clean ice, making it 
+                        one of the most reflective bodies of the Solar System.</description>
+            <discovery_date>1789-08-28</discovery_date>
+            <parameters>
+                <apoapsis>239160</apoapsis>
+                <periapsis>236920</periapsis>
+                <inclination>0.009</inclination>
+            </parameters>
+            <last_mission id="M1" />
         </satellite>
     </satellites>
 
