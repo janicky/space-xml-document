@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Gugi|Roboto+Condensed:300,300i,400,700');
 
-space, planets, name, title,
+space, planets, satellites, name, title,
 details > description,
 space > details,
 planets planet > description {
@@ -69,6 +69,16 @@ space > details authors author id:after {
 /*
 * === PLANETS ===
 */
+planets:before {
+    content: "Planets";
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    padding: 35px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
 planets {
     position: relative;
     background-color: #4623a1;
@@ -100,7 +110,6 @@ planets planet > name {
 }
 
 planets planet > description {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,6 +144,60 @@ planets planet > symbol:empty {
 planets planet details > * {
     display: block;
     font-weight: 100;
+}
+
+/*
+* === SATELLITES ===
+*/
+satellites:before {
+    content: "Satellites";
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    padding: 35px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+
+satellites {
+    background-image: url('../images/moon.jpg');
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 35px;
+}
+
+satellites satellite {
+    background-color: rgba(0, 0, 0, .5);
+    position: relative;
+    padding: 20px;
+    width: calc(25% - 40px);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 20px;
+    color: #fff;
+}
+
+satellites satellite > name {
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.05rem;
+    font-family: 'Gugi', serif;
+}
+
+satellites satellite > description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120%;
+    font-weight: 300;
+    height: 130px;
+    box-sizing: border-box;
+    padding: 10px 40px;
+    margin: 10px -20px;
+    color: rgba(255, 255, 255, .7);
 }
 
 /*
