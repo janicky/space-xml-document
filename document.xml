@@ -24,7 +24,19 @@
 
 <!-- PLANETS -->
     <planets>
-        <planet id="EARTH" typology="rocky_planet" satellites="DEI PHO">
+        <planet id="VENUS" typology="rocky_planet">
+            <name>Venus</name>
+            <symbol>♀</symbol>
+            <description>It has the longest rotation period of any planet in 
+                the Solar System and rotates in the opposite direction to most other planets</description>
+            <parameters>
+                <apoapsis>108939000</apoapsis>
+                <periapsis>107477000</periapsis>
+                <inclination>3.86</inclination>
+                <orbital_period type="days">224.701</orbital_period>
+            </parameters>
+        </planet>
+        <planet id="EARTH" typology="rocky_planet">
             <name>Earth</name>
             <symbol>♁</symbol>
             <description>According to radiometric dating and other sources 
