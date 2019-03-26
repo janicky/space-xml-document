@@ -48,6 +48,12 @@ space > details authors author {
     margin-right: 5px;
 }
 
+space > details authors author:not(:last-child):after {
+    content: ",";
+    margin-left: -3px;
+    margin-right: 2px;
+}
+
 space > details authors author id {
     padding: 2px;
     display: inline-block;
@@ -129,4 +135,50 @@ planets planet > symbol:empty {
 planets planet details > * {
     display: block;
     font-weight: 100;
+}
+
+/*
+* === PLANETS AND SATELLITES ===
+*/
+
+apoapsis:before {
+    content: "Apoapsis: ";
+}
+periapsis:before {
+    content: "Periapsis: ";
+}
+apoapsis:after,
+periapsis:after {
+    content: " km";
+}
+inclination:before {
+    content: "Inclination: ";
+}
+inclination:after {
+    content: "°";
+}
+orbital_period:before {
+    content: "Orbital period: ";
+}
+orbital_period[type=years]:after {
+    content: " years";
+}
+orbital_period[type=days]:after {
+    content: " days";
+}
+
+parameters > * {
+    position: relative;
+    display: block;
+    padding: 5px 5px 5px 110px;
+}
+
+parameters > *:before {
+    opacity: .6;
+    position: absolute;
+    left: 0;
+}
+
+parameters > *:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
