@@ -1,8 +1,11 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/css" href="css/styles.css"?>
-<!DOCTYPE space SYSTEM "space.dtd">
+<!-- <!DOCTYPE space SYSTEM "space.dtd"> -->
 
-<space>
+<space 
+xmlns="http://www.w3ii.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.w3ii.com space.xsd">
 <!-- DETAILS -->
     <details>
         <title>Planets and satellites</title>
@@ -56,7 +59,7 @@
             <parameters>
                 <apoapsis>152100000</apoapsis>
                 <periapsis>147095000</periapsis>
-                <inclination>7.155</inclination>
+                <inclination>7.15</inclination>
                 <orbital_period type="days">365.256</orbital_period>
             </parameters>
         </planet>
@@ -177,7 +180,7 @@
 
 <!-- SATELLITES -->
     <satellites>
-        <satellite id="MOON" body="EARTH">
+        <satellite id="MOO" body="EARTH">
             <name>Moon</name>
             <description>The Moon is an astronomical body that orbits planet Earth 
                         and is Earth's only permanent natural satellite.</description>
@@ -246,7 +249,6 @@
             <name>Callisto</name>
             <description>Callisto is the second-largest moon 
                 of Jupiter, after Ganymede.</description>
-            <discovery_date>1610</discovery_date>
             <parameters>
                 <apoapsis>1869000</apoapsis>
                 <periapsis>1897000</periapsis>
