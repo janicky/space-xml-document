@@ -200,7 +200,7 @@ xsi:schemaLocation="http://www.w3ii.com space.xsd">
             <parameters>
                 <apoapsis>23455</apoapsis>
                 <periapsis>23470</periapsis>
-                <inclination>0.93</inclination>
+                <inclination>0.930</inclination>
             </parameters>
         </satellite>
         <satellite id="PHO" body="MARS">
@@ -221,7 +221,7 @@ xsi:schemaLocation="http://www.w3ii.com space.xsd">
             <parameters>
                 <apoapsis>423400</apoapsis>
                 <periapsis>420000</periapsis>
-                <inclination>0.05</inclination>
+                <inclination>0.050</inclination>
             </parameters>
         </satellite>
         <satellite id="EUR" body="JUPITER">
@@ -298,7 +298,7 @@ xsi:schemaLocation="http://www.w3ii.com space.xsd">
             <parameters>
                 <apoapsis>15064000</apoapsis>
                 <periapsis>10832000</periapsis>
-                <inclination>151.78</inclination>
+                <inclination>151.780</inclination>
             </parameters>
             <last_mission id="M1" />
         </satellite>
@@ -312,7 +312,19 @@ xsi:schemaLocation="http://www.w3ii.com space.xsd">
                 <periapsis>236920</periapsis>
                 <inclination>0.009</inclination>
             </parameters>
-            <last_mission id="M1" />
+            <last_mission id="M3" />
+        </satellite>
+        <satellite id="ENC" body="SATURN">
+            <name>Enceladus</name>
+            <description>Enceladus is mostly covered by fresh, clean ice, making it 
+                        one of the most reflective bodies of the Solar System.</description>
+            <discovery_date>1789-08-28</discovery_date>
+            <parameters>
+                <apoapsis>239160</apoapsis>
+                <periapsis>236920</periapsis>
+                <inclination>0.009</inclination>
+            </parameters>
+            <last_mission id="M3" />
         </satellite>
     </satellites>
 
@@ -333,6 +345,12 @@ xsi:schemaLocation="http://www.w3ii.com space.xsd">
                 the Red Planet in search of signs of past life. The rover is
                 still actively exploring the Martian terrain, having far
                 outlasted her planned 90-day mission. </description>
+        </mission>
+        <mission id="M3">
+            <name>Curiosity</name>
+            <description>Curiosity is a car-sized rover designed to 
+                explore the craterGale on Mars as part of NASA's Mars
+                Science Laboratory mission (MSL). </description>
         </mission>
         <mission id="M3">
             <name>Curiosity</name>
