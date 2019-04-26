@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
    <xs:schema 
       xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      xmlns:g="http://www.w3.org/2001/XMLSchema"
       targetNamespace="http://www.w3ii.com"
       xmlns="http://www.w3ii.com"
       elementFormDefault="qualified">
+      <xs:simpleType name="my_age">
+            <xs:restriction base="xs:integer">
+                  <xs:minInclusive value="18"/>
+                  <xs:maxInclusive value="100"/>
+            </xs:restriction>
+      </xs:simpleType>
+      
          <xs:element name="space">
             <xs:complexType>
                   <xs:sequence>
@@ -74,35 +82,36 @@
 <!--  -->
 <!-- GROUPS -->
 <!--  -->
-  <xs:group name="author">
-        <xs:sequence>
-              <xs:sequence>
-                  <xs:element name="first_name">
-                        <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                              <xs:minLength value="3"/>
-                              <xs:maxLength value="8"/>
-                        </xs:restriction>
-                        </xs:simpleType>
-                  </xs:element>
-                  <xs:element name="last_name">
-                        <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                              <xs:minLength value="3"/>
-                              <xs:maxLength value="15"/>
-                        </xs:restriction>
-                        </xs:simpleType>
-                  </xs:element>
-                  <xs:element name="id">
-                        <xs:simpleType>
-                        <xs:restriction base="xs:integer">
-                              <xs:pattern value="[1-9][0-9][0-9][0-9][0-9][0-9]"/>
-                        </xs:restriction>
-                        </xs:simpleType>
-                  </xs:element>
-            </xs:sequence>
-        </xs:sequence>
-  </xs:group>
+  <g:group name="author">
+        <g:sequence>
+              <g:sequence>
+                  <g:element name="first_name">
+                        <g:simpleType>
+                        <g:restriction base="g:string">
+                              <g:minLength value="3"/>
+                              <g:maxLength value="8"/>
+                        </g:restriction>
+                        </g:simpleType>
+                  </g:element>
+                  <g:element name="last_name">
+                        <g:simpleType>
+                        <g:restriction base="g:string">
+                              <xs:enumeration value="Janicki"/>
+                              <xs:enumeration value="Jachimstal"/>
+                        </g:restriction>
+                        </g:simpleType>
+                  </g:element>
+                  <g:element name="id">
+                        <g:simpleType>
+                        <g:restriction base="g:integer">
+                              <g:pattern value="[1-9][0-9][0-9][0-9][0-9][0-9]"/>
+                        </g:restriction>
+                        </g:simpleType>
+                  </g:element>                          
+                  <g:element name="age" type="my_age"/>                                 
+            </g:sequence>
+        </g:sequence>
+  </g:group>
 
   <xs:group name="planet">
         <xs:sequence>
@@ -135,6 +144,8 @@
                               <xs:simpleType>
                               <xs:restriction base="xs:long">
                                     <xs:pattern value="[0-9]*" />
+                                    <xs:minInclusive value="0"/>
+                                    <xs:maxInclusive value="10000000000000"/>
                               </xs:restriction>
                               </xs:simpleType>
                         </xs:element>
@@ -142,6 +153,8 @@
                               <xs:simpleType>
                               <xs:restriction base="xs:long">
                                     <xs:pattern value="[0-9]*" />
+                                    <xs:minInclusive value="0"/>
+                                    <xs:maxInclusive value="1000000000000000"/>
                               </xs:restriction>
                               </xs:simpleType>
                         </xs:element>
@@ -169,8 +182,8 @@
                   <xs:element name="last_mission" minOccurs="0">
                   <xs:complexType>
                         <xs:simpleContent>
-                        <xs:extension base="xs:string">
-                        <xs:attribute type="xs:string" name="id">
+                              <xs:extension base="xs:string">
+                              <xs:attribute type="xs:string" name="id">
                         </xs:attribute>
                         </xs:extension>
                         </xs:simpleContent>
@@ -212,6 +225,8 @@
                               <xs:simpleType>
                               <xs:restriction base="xs:long">
                                     <xs:pattern value="[0-9]*" />
+                                    <xs:minInclusive value="0"/>
+                                    <xs:maxInclusive value="1000000000"/>
                               </xs:restriction>
                               </xs:simpleType>
                         </xs:element>
@@ -219,6 +234,8 @@
                               <xs:simpleType>
                               <xs:restriction base="xs:long">
                                     <xs:pattern value="[0-9]*" />
+                                    <xs:minInclusive value="0"/>
+                                    <xs:maxInclusive value="1000000000"/>
                               </xs:restriction>
                               </xs:simpleType>
                         </xs:element>

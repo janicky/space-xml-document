@@ -16,11 +16,13 @@ xsi:schemaLocation="http://www.w3ii.com space.xsd">
                 <first_name>Konrad</first_name>
                 <last_name>Jachimstal</last_name>
                 <id>211807</id>
+                <age>22</age>
             </author>
             <author>
                 <first_name>Patryk</first_name>
                 <last_name>Janicki</last_name>
                 <id>211951</id>
+                <age>25</age>
             </author>
         </authors>
     </details>
