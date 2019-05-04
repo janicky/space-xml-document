@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.planets.com" xmlns="http://www.planets.com" xmlns:sat="http://www.satellites.com">
+<xs:import namespace="http://www.satellites.com" schemaLocation="satellites.xsd"/>
+
+<xs:element name="planets">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="planet" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="name">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="20"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="symbol" minOccurs="0">
+                    </xs:element>
+                    <xs:element name="description">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                        <xs:minLength value="30"/>
+                        <xs:maxLength value="240"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                    </xs:element>
+                    <xs:element type="xs:date" name="discovery_date" minOccurs="0"/>
+                    <xs:element name="parameters">
+                    <xs:complexType>
+                        <xs:sequence>
+                        <xs:element name="apoapsis">
+                            <xs:simpleType>
+                            <xs:restriction base="xs:long">
+                                <xs:pattern value="[0-9]*" />
+                                <xs:minInclusive value="0"/>
+                                <xs:maxInclusive value="10000000000000"/>
+                            </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="periapsis">
+                            <xs:simpleType>
+                            <xs:restriction base="xs:long">
+                                <xs:pattern value="[0-9]*" />
+                                <xs:minInclusive value="0"/>
+                                <xs:maxInclusive value="1000000000000000"/>
+                            </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="inclination">
+                            <xs:simpleType>
+                            <xs:restriction base="xs:float">
+                                <xs:pattern value="\d+\.\d{2}" />
+                                <xs:pattern value="0.0"/>
+                            </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="orbital_period">
+                            <xs:complexType>
+                            <xs:simpleContent>
+                                <xs:extension base="xs:float">
+                                <xs:attribute type="xs:string" name="type" use="optional"/>
+                                </xs:extension>
+                            </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element type="xs:string" name="detection_method" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                    </xs:element>
+                    <xs:element name="last_mission" minOccurs="0" type="last_mission"/>
+                </xs:sequence>
+                    <xs:attributeGroup ref="plante_atribute"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:attributeGroup name="plante_atribute">
+    <xs:attribute type="xs:ID" name="id" use="required"/>
+    <xs:attribute type="xs:string" name="typology" use="optional"/>
+    <xs:attribute type="xs:string" name="satellites" use="optional"/>
+</xs:attributeGroup>
+
+<xs:complexType name="last_mission">
+    <xs:simpleContent>
+    <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" use="required">
+        </xs:attribute>
+    </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+</xs:schema>

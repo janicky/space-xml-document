@@ -2,10 +2,7 @@
 <?xml-stylesheet type="text/css" href="css/styles.css"?>
 <!-- <!DOCTYPE space SYSTEM "space.dtd"> -->
 
-<space 
-xmlns="http://www.w3ii.com"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://www.w3ii.com space.xsd">
+<space xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="space.xsd">
 <!-- DETAILS -->
     <details>
         <title>Planets and satellites</title>
@@ -28,7 +25,7 @@ xsi:schemaLocation="http://www.w3ii.com space.xsd">
     </details>
 
 <!-- PLANETS -->
-    <planets>
+    <pla:planets xmlns:pla="http://www.planets.com" xsi:schemaLocation="http://www.planets.com planets.xsd">
         <planet id="MERCURY" typology="rocky_planet">
             <name>Mercury</name>
             <symbol>☿</symbol>
@@ -48,7 +45,7 @@ xsi:schemaLocation="http://www.w3ii.com space.xsd">
                 the Solar System and rotates in the opposite direction to most other planets.</description>
             <parameters>
                 <apoapsis>108939000</apoapsis>
-                <periapsis>107477000</periapsis>
+                <periapsis>46001200</periapsis>
                 <inclination>3.86</inclination>
                 <orbital_period type="days">224.701</orbital_period>
             </parameters>
@@ -178,10 +175,10 @@ xsi:schemaLocation="http://www.w3ii.com space.xsd">
                 <detection_method>radial velocity</detection_method>
             </parameters>
         </planet>
-    </planets>
+    </pla:planets>
 
 <!-- SATELLITES -->
-    <satellites>
+    <sat:satellites xmlns:sat="http://www.satellites.com" xsi:schemaLocation="http://www.satellites.com satellites.xsd">
         <satellite id="MOO" body="EARTH">
             <name>Moon</name>
             <description>The Moon is an astronomical body that orbits planet Earth 
@@ -328,10 +325,10 @@ xsi:schemaLocation="http://www.w3ii.com space.xsd">
             </parameters>
             <last_mission id="M3" />
         </satellite>
-    </satellites>
+    </sat:satellites>
 
 <!-- MISSIONS -->
-    <missions>
+    <mis:missions xmlns:mis="http://www.missions.com" xsi:schemaLocation="http://www.mission.com missions.xsd">
         <mission id="M1">
             <name>Apollo XI</name>
             <description>Apollo 11 was the spaceflight that landed
@@ -357,13 +354,5 @@ xsi:schemaLocation="http://www.w3ii.com space.xsd">
                 Science Laboratory mission (MSL). </description>
             <agency>SpaceX</agency>
         </mission>
-        <mission id="M3">
-            <name>Curiosity</name>
-            <description>Curiosity is a car-sized rover designed to 
-                explore the craterGale on Mars as part of NASA's Mars
-                Science Laboratory mission (MSL). </description>
-            <agency>SpaceX</agency>
-        </mission>
-
-    </missions>
+    </mis:missions>
 </space>
