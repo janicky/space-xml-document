@@ -10,6 +10,9 @@
             <satellites-alphabetically>
                 <xsl:call-template name="satellites-alphabetically"/>
             </satellites-alphabetically>
+            <missions>
+                <xsl:call-template name="missions"/>
+            </missions>
         </space>
     </xsl:template>
     <xsl:template match="planets" name="planets-list">
@@ -24,6 +27,12 @@
             <satellite>
                <xsl:value-of select="name"/> 
             </satellite>
+        </xsl:for-each>
+    </xsl:template>
+    <xsl:template match="missions" name="missions">
+        <xsl:for-each select="//mission">
+            <xsl:value-of select="name"/>
+            <xsl:if test="not(position()=last())">, </xsl:if>
         </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
