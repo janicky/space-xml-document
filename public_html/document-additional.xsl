@@ -67,13 +67,30 @@
     <!-- Missions with targets -->
     <xsl:template match="missions" name="missions">
         <xsl:for-each select="//mission">
-            <xsl:variable name="mission_id" select="@id" />
-            <xsl:variable name="targets" select="//satellite/last_mission[@id=$mission_id]" />
-            <xsl:value-of select="name"/>
-            <xsl:value-of select="count($targets)" />
-            <xsl:if test="not(position()=last())">, </xsl:if>
+            <mission>
+                <xsl:copy-of select="./@*" />
+                <xsl:copy-of select="./*" />
+                <targets>
+                    <xsl:call-template name="mission-targets">
+                        <xsl:with-param name="mission" select="@id" />
+                    </xsl:call-template>
+                </targets>
+            </mission>
         </xsl:for-each>
     </xsl:template>
     
     <!-- Targets for mission -->
+    <xsl:template name="mission-targets">
+        <xsl:param name="mission" />
+        <xsl:variable name="targets" select="//satellite/last_mission[@id=$mission] | //planet/last_mission[@id=$mission]" />
+        <xsl:for-each select="$targets">
+            <target>
+                <xsl:attribute name="type">
+                    <xsl:value-of select="name(../.)" />
+                </xsl:attribute>
+                <xsl:copy-of select="../@id" />
+                <xsl:value-of select="../name" />
+            </target>
+        </xsl:for-each>
+    </xsl:template>
 </xsl:stylesheet>

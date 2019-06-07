@@ -405,6 +405,40 @@
             </parameters>
         </planet>
     </planets>
-    <missions>Apollo XI5, Opportunity0, Curiosity0</missions>
+    <missions>
+        <mission id="M1">
+            <name>Apollo XI</name>
+            <description>Apollo 11 was the spaceflight that landed
+                the first two people on the Moon. Commander Neil
+                Armstrong and lunar module pilot Buzz Aldrin, both
+                American, landed the Apollo Lunar Module Eagle on
+                July 20, 1969, at 20:17 UTC. </description>
+            <targets>
+                <target type="satellite" id="MOON">Moon</target>
+                <target type="satellite" id="RHE">Rhea</target>
+                <target type="satellite" id="MIM">Mimas</target>
+                <target type="satellite" id="PHB">Phoebe</target>
+                <target type="satellite" id="ENC">Enceladus</target>
+            </targets>
+        </mission>
+        <mission id="M2">
+            <name>Opportunity</name>
+            <description>Opportunity was the second of the two 
+                rovers launched in 2003 to land on Mars and begin traversing
+                the Red Planet in search of signs of past life. The rover is
+                still actively exploring the Martian terrain, having far
+                outlasted her planned 90-day mission. </description>
+            <targets/>
+        </mission>
+        <mission id="M3">
+            <name>Curiosity</name>
+            <description>Curiosity is a car-sized rover designed to 
+                explore the craterGale on Mars as part of NASA's Mars
+                Science Laboratory mission (MSL). </description>
+            <targets>
+                <target type="planet" id="MARS">Mars</target>
+            </targets>
+        </mission>
+    </missions>
     <planets-list>Mercury (☿), Venus (♀), Earth (♁), Mars (♂), Jupiter (♃), Saturn (♄), Uranus (⛢), Neptune (♆), Trappist 1b, Trappist 1d, Luyten b, 61 Virginis b</planets-list>
 </space>
