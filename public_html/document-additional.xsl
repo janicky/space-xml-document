@@ -6,6 +6,7 @@
     extension-element-prefixes="date"
     version="2.0">
     <xsl:output method="xml" indent="yes" />
+    
     <!-- Root -->
     <xsl:template match="/">
         <space>
@@ -18,6 +19,9 @@
             <planets-list>
                 <xsl:call-template name="planets-list"/>
             </planets-list>
+            <typologies>
+                <xsl:call-template name="typologies" />
+            </typologies>
             <statistics>
                 <xsl:call-template name="statistics" />
             </statistics>
@@ -112,5 +116,19 @@
         <statistic name="created-at">
             <xsl:value-of select="current-date()" />
         </statistic>
+    </xsl:template>
+    
+    <!-- Typologies -->
+    <xsl:template name="typologies">
+        <xsl:for-each-group select="//planet" group-by="@typology">
+            <typology>
+                <name>
+                    <xsl:value-of select="current-grouping-key()" />
+                </name>
+                <planets>
+                    <xsl:value-of select="count(//planet[@typology=current-grouping-key()])" />
+                </planets>
+            </typology>
+        </xsl:for-each-group>
     </xsl:template>
 </xsl:stylesheet>
