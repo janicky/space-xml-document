@@ -441,4 +441,7 @@
         </mission>
     </missions>
     <planets-list>Mercury (☿), Venus (♀), Earth (♁), Mars (♂), Jupiter (♃), Saturn (♄), Uranus (⛢), Neptune (♆), Trappist 1b, Trappist 1d, Luyten b, 61 Virginis b</planets-list>
+    <statistics>
+        <statistic name="planets-count">12</statistic>
+    </statistics>
 </space>

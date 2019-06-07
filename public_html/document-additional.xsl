@@ -17,6 +17,9 @@
             <planets-list>
                 <xsl:call-template name="planets-list"/>
             </planets-list>
+            <statistics>
+                <xsl:call-template name="statistics" />
+            </statistics>
         </space>
     </xsl:template>
     
@@ -92,5 +95,12 @@
                 <xsl:value-of select="../name" />
             </target>
         </xsl:for-each>
+    </xsl:template>
+    
+    <!-- Statistics -->
+    <xsl:template name="statistics">
+        <statistic name="planets-count">
+            <xsl:value-of select="count(//planet)" />
+        </statistic>
     </xsl:template>
 </xsl:stylesheet>
