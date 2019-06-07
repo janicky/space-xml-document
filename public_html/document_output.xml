@@ -18,7 +18,6 @@
                 <detection_method>radial velocity</detection_method>
                             
             </parameters>
-            <satellites/>
         </planet>
         <planet id="EARTH" typology="rocky_planet">
             <name>Earth</name>
@@ -149,7 +148,6 @@
                 <detection_method>radial velocity</detection_method>
                             
             </parameters>
-            <satellites/>
         </planet>
         <planet id="MARS" typology="rocky_planet" satellites="DEI PHO">
             <name>Mars</name>
@@ -218,7 +216,6 @@
                 <orbital_period type="days">87.969</orbital_period>
                             
             </parameters>
-            <satellites/>
         </planet>
         <planet id="NEPTUNE" typology="ice_giant">
             <name>Neptune</name>
@@ -236,7 +233,6 @@
                 <orbital_period type="years">164.8</orbital_period>
                             
             </parameters>
-            <satellites/>
         </planet>
         <planet id="SATURN" satellites="ENC">
             <name>Saturn</name>
@@ -354,7 +350,6 @@
                 <detection_method>transit</detection_method>
                             
             </parameters>
-            <satellites/>
         </planet>
         <planet id="TRAPPIST1D">
             <name>Trappist 1d</name>
@@ -374,7 +369,6 @@
                 <detection_method>transit</detection_method>
                             
             </parameters>
-            <satellites/>
         </planet>
         <planet id="URANUS" typology="ice_giant">
             <name>Uranus</name>
@@ -392,7 +386,6 @@
                 <orbital_period type="years">84.020</orbital_period>
                             
             </parameters>
-            <satellites/>
         </planet>
         <planet id="VENUS" typology="rocky_planet">
             <name>Venus</name>
@@ -410,7 +403,6 @@
                 <orbital_period type="days">224.701</orbital_period>
                             
             </parameters>
-            <satellites/>
         </planet>
     </planets>
     <missions>Apollo XI, Opportunity, Curiosity</missions>
