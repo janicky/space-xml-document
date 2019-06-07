@@ -413,6 +413,6 @@
             <satellites/>
         </planet>
     </planets>
-    <planets-list>Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Trappist 1b, Trappist 1d, Luyten b, 61 Virginis b</planets-list>
     <missions>Apollo XI, Opportunity, Curiosity</missions>
+    <planets-list>Mercury (☿), Venus (♀), Earth (♁), Mars (♂), Jupiter (♃), Saturn (♄), Uranus (⛢), Neptune (♆), Trappist 1b, Trappist 1d, Luyten b, 61 Virginis b</planets-list>
 </space>

@@ -7,17 +7,22 @@
             <planets>
                 <xsl:call-template name="planets-alphabetically"/>
             </planets>
-            <planets-list>
-                <xsl:call-template name="planets-list"/>
-            </planets-list>
             <missions>
                 <xsl:call-template name="missions"/>
             </missions>
+            <planets-list>
+                <xsl:call-template name="planets-list"/>
+            </planets-list>
         </space>
     </xsl:template>
     <xsl:template name="planets-list">
         <xsl:for-each select="//planet">
             <xsl:value-of select="name"/>
+            <xsl:if test="./symbol">
+                <xsl:text>&#160;(</xsl:text>
+                <xsl:value-of select="./symbol" />
+                <xsl:text>)</xsl:text>
+            </xsl:if>
             <xsl:if test="not(position()=last())">, </xsl:if>
         </xsl:for-each>
     </xsl:template>
