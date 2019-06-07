@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:stylesheet 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+    xmlns:date="http://exslt.org/dates-and-times" 
+    extension-element-prefixes="date"
+    version="2.0">
     <xsl:output method="xml" indent="yes" />
-    
     <!-- Root -->
     <xsl:template match="/">
         <space>
             <planets>
-                <xsl:call-template name="planets">
-                    <xsl:with-param name="sort" select="'ascending'" />
-                </xsl:call-template>
+                <xsl:call-template name="planets" />
             </planets>
             <missions>
                 <xsl:call-template name="missions"/>
@@ -25,9 +26,9 @@
     
     <!-- Planets with sort -->
     <xsl:template name="planets">
-        <xsl:param name="sort" />
         <xsl:for-each select="//planet">
-            <xsl:sort order="$sort"/>
+            <xsl:sort select="name" order="ascending"/>
+            <xsl:sort select="apoapsis" order="descending" data-type="number" />
             <planet>
                <xsl:copy-of select="./@*" />
                <xsl:copy-of select="./*" />
@@ -101,6 +102,15 @@
     <xsl:template name="statistics">
         <statistic name="planets-count">
             <xsl:value-of select="count(//planet)" />
+        </statistic>
+        <statistic name="satellites-count">
+            <xsl:value-of select="count(//satellite)" />
+        </statistic>
+        <statistic name="missions-count">
+            <xsl:value-of select="count(//mission)" />
+        </statistic>
+        <statistic name="created-at">
+            <xsl:value-of select="current-date()" />
         </statistic>
     </xsl:template>
 </xsl:stylesheet>
