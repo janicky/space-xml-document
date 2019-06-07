@@ -64,11 +64,16 @@
         </xsl:for-each>
     </xsl:template>
     
-    
+    <!-- Missions with targets -->
     <xsl:template match="missions" name="missions">
         <xsl:for-each select="//mission">
+            <xsl:variable name="mission_id" select="@id" />
+            <xsl:variable name="targets" select="//satellite/last_mission[@id=$mission_id]" />
             <xsl:value-of select="name"/>
+            <xsl:value-of select="count($targets)" />
             <xsl:if test="not(position()=last())">, </xsl:if>
         </xsl:for-each>
     </xsl:template>
+    
+    <!-- Targets for mission -->
 </xsl:stylesheet>
