@@ -333,21 +333,196 @@
    <typologies>
       <typology>
          <name>rocky_planet</name>
-         <planets>4</planets>
+         <planets count="4">
+            <planet id="MERCURY" typology="rocky_planet">
+               <name>Mercury</name>
+               <symbol>☿</symbol>
+               <description>Mercury is the smallest and innermost planet in the Solar System.
+                It is named after the Roman deity Mercury.</description>
+               <parameters>
+                  <apoapsis>69816900</apoapsis>
+                  <periapsis>46001200</periapsis>
+                  <inclination>3.38</inclination>
+                  <orbital_period type="days">87.969</orbital_period>
+               </parameters>
+            </planet>
+            <planet id="VENUS" typology="rocky_planet">
+               <name>Venus</name>
+               <symbol>♀</symbol>
+               <description>It has the longest rotation period of any planet in 
+                the Solar System and rotates in the opposite direction to most other planets.</description>
+               <parameters>
+                  <apoapsis>108939000</apoapsis>
+                  <periapsis>107477000</periapsis>
+                  <inclination>3.86</inclination>
+                  <orbital_period type="days">224.701</orbital_period>
+               </parameters>
+            </planet>
+            <planet id="EARTH" typology="rocky_planet">
+               <name>Earth</name>
+               <symbol>♁</symbol>
+               <description>According to radiometric dating and other sources 
+                of evidence, Earth formed over 4.5 billion years ago.</description>
+               <parameters>
+                  <apoapsis>152100000</apoapsis>
+                  <periapsis>147095000</periapsis>
+                  <inclination>7.155</inclination>
+                  <orbital_period type="days">365.256</orbital_period>
+               </parameters>
+               <satellites>
+                  <satellite id="MOON">
+                     <name>Moon</name>
+                     <description>The Moon is an astronomical body that orbits planet Earth 
+                        and is Earth's only permanent natural satellite.</description>
+                     <parameters>
+                        <apoapsis>405400</apoapsis>
+                        <periapsis>362600</periapsis>
+                        <inclination>5.145</inclination>
+                     </parameters>
+                     <last_mission id="M1"/>
+                  </satellite>
+               </satellites>
+            </planet>
+            <planet id="MARS" typology="rocky_planet" satellites="DEI PHO">
+               <name>Mars</name>
+               <symbol>♂</symbol>
+               <description>Mars is the fourth planet from the Sun and the 
+                second-smallest planet in the Solar System after Mercury.</description>
+               <parameters>
+                  <apoapsis>249200000</apoapsis>
+                  <periapsis>206700000</periapsis>
+                  <inclination>5.65</inclination>
+                  <orbital_period type="days">687</orbital_period>
+               </parameters>
+               <last_mission id="M3"/>
+               <satellites>
+                  <satellite id="DEI">
+                     <name>Deimos</name>
+                     <description>Deimos is the smaller and outermost of the 
+                two natural satellites of the planet Mars, the other 
+                being Phobos.</description>
+                     <discovery_date>1877-08-12</discovery_date>
+                     <parameters>
+                        <apoapsis>23455</apoapsis>
+                        <periapsis>23470</periapsis>
+                        <inclination>0.93</inclination>
+                     </parameters>
+                  </satellite>
+                  <satellite id="PHO">
+                     <name>Phobos</name>
+                     <description>Phobos is the innermost and larger of the 
+                two natural satellites of Mars.</description>
+                     <discovery_date>1877-08-18</discovery_date>
+                     <parameters>
+                        <apoapsis>9517</apoapsis>
+                        <periapsis>9234</periapsis>
+                        <inclination>1.093</inclination>
+                     </parameters>
+                  </satellite>
+               </satellites>
+            </planet>
+         </planets>
       </typology>
       <typology>
          <name>gas_giant</name>
-         <planets>1</planets>
+         <planets count="1">
+            <planet id="JUPITER" typology="gas_giant" satellites="CAL EUR GAN IO">
+               <name>Jupiter</name>
+               <symbol>♃</symbol>
+               <description>Jupiter is the fifth planet from the Sun and 
+                the largest in the Solar System.</description>
+               <parameters>
+                  <apoapsis>816620000</apoapsis>
+                  <periapsis>740520000</periapsis>
+                  <inclination>6.09</inclination>
+                  <orbital_period type="years">11.862</orbital_period>
+               </parameters>
+               <satellites>
+                  <satellite id="IO">
+                     <name>Io</name>
+                     <description>Io was first discovered by Galileo 
+                in 1610, making it one of the Galilean Satellites.</description>
+                     <parameters>
+                        <apoapsis>423400</apoapsis>
+                        <periapsis>420000</periapsis>
+                        <inclination>0.05</inclination>
+                     </parameters>
+                  </satellite>
+                  <satellite id="EUR">
+                     <name>Europa</name>
+                     <description>Europa is the smallest of the four
+                Galilean moons orbiting Jupiter.</description>
+                     <parameters>
+                        <apoapsis>676938</apoapsis>
+                        <periapsis>664862</periapsis>
+                        <inclination>0.470</inclination>
+                     </parameters>
+                  </satellite>
+                  <satellite id="GAN">
+                     <name>Ganymede</name>
+                     <description>Ganymede is the largest and most massive
+                moon of Jupiter and in the Solar System.</description>
+                     <discovery_date>1610-01-06</discovery_date>
+                     <parameters>
+                        <apoapsis>1071600</apoapsis>
+                        <periapsis>1069200</periapsis>
+                        <inclination>2.214</inclination>
+                     </parameters>
+                  </satellite>
+                  <satellite id="CAL">
+                     <name>Callisto</name>
+                     <description>Callisto is the second-largest moon 
+                of Jupiter, after Ganymede.</description>
+                     <discovery_date>1610</discovery_date>
+                     <parameters>
+                        <apoapsis>1869000</apoapsis>
+                        <periapsis>1897000</periapsis>
+                        <inclination>2.017</inclination>
+                     </parameters>
+                  </satellite>
+               </satellites>
+            </planet>
+         </planets>
       </typology>
       <typology>
          <name>ice_giant</name>
-         <planets>2</planets>
+         <planets count="2">
+            <planet id="URANUS" typology="ice_giant">
+               <name>Uranus</name>
+               <symbol>⛢</symbol>
+               <description>It has the third-largest planetary radius and fourth-largest 
+                planetary mass in the Solar System. Uranus is similar in composition to Neptune.</description>
+               <parameters>
+                  <apoapsis>3003620000000</apoapsis>
+                  <periapsis>2741300000000</periapsis>
+                  <inclination>6.48</inclination>
+                  <orbital_period type="years">84.020</orbital_period>
+               </parameters>
+            </planet>
+            <planet id="NEPTUNE" typology="ice_giant">
+               <name>Neptune</name>
+               <symbol>♆</symbol>
+               <description>Neptune is 17 times the mass of Earth, slightly more massive 
+                than its near-twin Uranus. Neptune is denser and physically smaller than Uranus.</description>
+               <parameters>
+                  <apoapsis>4545670000000</apoapsis>
+                  <periapsis>4444450000000</periapsis>
+                  <inclination>6.43</inclination>
+                  <orbital_period type="years">164.8</orbital_period>
+               </parameters>
+            </planet>
+         </planets>
       </typology>
    </typologies>
    <statistics>
       <statistic name="planets-count">12</statistic>
       <statistic name="satellites-count">12</statistic>
       <statistic name="missions-count">3</statistic>
-      <statistic name="created-at">2019-06-07+02:00</statistic>
+      <statistic name="typologies-count">3</statistic>
+      <statistic name="average-planets-apoapsis">6.293524723715834E11</statistic>
+      <statistic name="average-planets-periapsis">5.990311874115834E11</statistic>
+      <statistic name="average-satellites-apoapsis">1.8123835E6</statistic>
+      <statistic name="average-satellites-periapsis">1.4515085E6</statistic>
+      <statistic name="created-at">2019-06-08+02:00</statistic>
    </statistics>
 </space>

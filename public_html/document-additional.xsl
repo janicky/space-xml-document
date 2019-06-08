@@ -33,14 +33,19 @@
         <xsl:for-each select="//planet">
             <xsl:sort select="name" order="ascending"/>
             <xsl:sort select="apoapsis" order="descending" data-type="number" />
-            <planet>
-               <xsl:copy-of select="./@*" />
-               <xsl:copy-of select="./*" />
-               <xsl:call-template name="planet-satellites">
-                   <xsl:with-param name="body" select="@id" />
-               </xsl:call-template>
-            </planet>
+            <xsl:call-template name="planet" />
         </xsl:for-each>
+    </xsl:template>
+    
+    <!-- Planet template -->
+    <xsl:template name="planet">
+        <planet>
+           <xsl:copy-of select="./@*" />
+           <xsl:copy-of select="./*" />
+           <xsl:call-template name="planet-satellites">
+               <xsl:with-param name="body" select="@id" />
+           </xsl:call-template>
+        </planet>
     </xsl:template>
     
     <!-- Satellites for specified body -->
@@ -164,7 +169,12 @@
                     <xsl:value-of select="current-grouping-key()" />
                 </name>
                 <planets>
-                    <xsl:value-of select="count(//planet[@typology=current-grouping-key()])" />
+                    <xsl:attribute name="count">
+                        <xsl:value-of select="count(//planet[@typology=current-grouping-key()])" />
+                    </xsl:attribute>
+                    <xsl:for-each select="//planet[@typology=current-grouping-key()]">
+                        <xsl:call-template name="planet" />
+                    </xsl:for-each>
                 </planets>
             </typology>
         </xsl:for-each-group>
