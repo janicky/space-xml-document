@@ -19,13 +19,24 @@
                         <xsl:call-template name="planets" />
                     </div>
                 </div>
+                <div class="satellites-section">
+                    <h1>Satellites</h1>
+                    <hr />
+                    <div class="satellites">
+                        <xsl:call-template name="satellites" />
+                    </div>
+                </div>
             </body>
         </html>
     </xsl:template>
     
+    <!-- Planets -->
     <xsl:template name="planets">
         <xsl:for-each select="//planet">
             <div class="planet">
+                <xsl:attribute name="id">
+                    <xsl:value-of select="@id" />
+                </xsl:attribute>
                 <h2>
                     <xsl:value-of select="name" />
                 </h2>
@@ -35,7 +46,7 @@
                 <div class="planet__satellites">
                     <b>Satellites: </b>
                     <xsl:for-each select="satellites/satellite">
-                        <a class="satellite">
+                        <a>
                             <xsl:attribute name="href">
                                 <xsl:value-of select="concat('#', @id)" />
                             </xsl:attribute>
@@ -50,4 +61,29 @@
         </xsl:for-each>
     </xsl:template>
 
+    <!-- Satellites -->
+    <xsl:template name="satellites">
+        <xsl:for-each select="//satellite">
+            <div class="satellite">
+                <xsl:attribute name="id">
+                    <xsl:value-of select="@id" />
+                </xsl:attribute>
+                <h2>
+                    <xsl:value-of select="name" />
+                </h2>
+                <p>
+                    <xsl:value-of select="description" />
+                </p>
+                <div class="satellite_planet">
+                    <b>Planet: </b>
+                    <a>
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="concat('#', ../../@id)" />
+                        </xsl:attribute>
+                        <xsl:value-of select="../../name" />
+                    </a>
+                </div>
+            </div>
+        </xsl:for-each>
+    </xsl:template>
 </xsl:stylesheet>
