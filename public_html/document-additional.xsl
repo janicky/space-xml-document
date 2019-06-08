@@ -102,6 +102,21 @@
         </xsl:for-each>
     </xsl:template>
     
+    <!-- Average apoapsis -->
+    <xsl:template name="average-parameter">
+        <xsl:param name="element" />
+        <xsl:variable name="sum" select="sum($element)" />
+        <xsl:variable name="count" select="count($element)" />
+        <xsl:choose>
+            <xsl:when test="not($count = 0)">
+                <xsl:value-of select="$sum div $count" />
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>0</xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
     <!-- Statistics -->
     <xsl:template name="statistics">
         <statistic name="planets-count">
@@ -115,6 +130,26 @@
         </statistic>
         <statistic name="typologies-count">
             <xsl:value-of select="count(distinct-values(//planet/@typology))" />
+        </statistic>
+        <statistic name="average-planets-apoapsis">
+            <xsl:call-template name="average-parameter">
+                <xsl:with-param name="element" select="//planet/parameters/apoapsis" />
+            </xsl:call-template>
+        </statistic>
+        <statistic name="average-planets-periapsis">
+            <xsl:call-template name="average-parameter">
+                <xsl:with-param name="element" select="//planet/parameters/periapsis" />
+            </xsl:call-template>
+        </statistic>
+        <statistic name="average-satellites-apoapsis">
+            <xsl:call-template name="average-parameter">
+                <xsl:with-param name="element" select="//satellite/parameters/apoapsis" />
+            </xsl:call-template>
+        </statistic>
+        <statistic name="average-satellites-periapsis">
+            <xsl:call-template name="average-parameter">
+                <xsl:with-param name="element" select="//satellite/parameters/periapsis" />
+            </xsl:call-template>
         </statistic>
         <statistic name="created-at">
             <xsl:value-of select="current-date()" />
