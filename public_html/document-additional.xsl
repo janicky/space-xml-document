@@ -113,6 +113,9 @@
         <statistic name="missions-count">
             <xsl:value-of select="count(//mission)" />
         </statistic>
+        <statistic name="typologies-count">
+            <xsl:value-of select="count(distinct-values(//planet/@typology))" />
+        </statistic>
         <statistic name="created-at">
             <xsl:value-of select="current-date()" />
         </statistic>
