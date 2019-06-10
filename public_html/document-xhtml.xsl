@@ -26,6 +26,13 @@
                         <xsl:call-template name="satellites" />
                     </div>
                 </div>
+                <div class="typologies-section">
+                    <h1>Typologies</h1>
+                    <hr />
+                    <div class="typologies">
+                        <xsl:call-template name="typologies" />
+                    </div>
+                </div>
             </body>
         </html>
     </xsl:template>
@@ -86,4 +93,18 @@
             </div>
         </xsl:for-each>
     </xsl:template>
+    
+    <!-- Typologies -->
+    <xsl:template name="typologies">
+        <xsl:for-each select="//typology">
+            <div class="typology">
+                <h2>
+                    <xsl:value-of select="name" />
+                </h2>
+            </div>
+        </xsl:for-each>
+    </xsl:template>
+    
+    
+    
 </xsl:stylesheet>
