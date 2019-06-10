@@ -66,6 +66,17 @@
                         </xsl:for-each>
                     </div>
                 </xsl:if>
+                <xsl:if test="@typology">
+                    <div class="planet__typology">
+                        <b>Typology: </b>
+                        <a>
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="concat('#', @typology)" />
+                            </xsl:attribute>
+                            <xsl:value-of select="@typology" />
+                        </a>
+                    </div>
+                </xsl:if>
             </div>
         </xsl:for-each>
     </xsl:template>
@@ -100,6 +111,9 @@
     <xsl:template name="typologies">
         <xsl:for-each select="//typology">
             <div class="typology">
+                <xsl:attribute name="id">
+                    <xsl:value-of select="name" />
+                </xsl:attribute>
                 <h2>
                     <xsl:value-of select="name" />
                     <xsl:value-of select="concat(' (', planets/@count, ')')" />
