@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+<xsl:stylesheet 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+    version="2.0">
+    <xsl:variable name="namespace" select="'http://www.w3.org/1999/xhtml'" />
     <xsl:output 
-        method="html" 
+        method="html"
         doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" 
         doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
     
@@ -48,8 +51,8 @@
     
     <!-- Planets -->
     <xsl:template name="planets">
-        <xsl:for-each select="//planet">
-            <div class="planet">
+        <xsl:for-each select="//space/planets/planet">
+            <div class="planet" xmlns="http://www.w3.org/1999/xhtml">
                 <xsl:attribute name="id">
                     <xsl:value-of select="@id" />
                 </xsl:attribute>
@@ -92,8 +95,8 @@
 
     <!-- Satellites -->
     <xsl:template name="satellites">
-        <xsl:for-each select="//satellite">
-            <div class="satellite">
+        <xsl:for-each select="//space/satellites/satellite">
+            <div class="satellite" xmlns="http://www.w3.org/1999/xhtml">
                 <xsl:attribute name="id">
                     <xsl:value-of select="@id" />
                 </xsl:attribute>
@@ -119,7 +122,7 @@
     <!-- Typologies -->
     <xsl:template name="typologies">
         <xsl:for-each select="//typology">
-            <div class="typology">
+            <div class="typology" xmlns="http://www.w3.org/1999/xhtml">
                 <xsl:attribute name="id">
                     <xsl:value-of select="name" />
                 </xsl:attribute>
@@ -146,7 +149,7 @@
     <!-- Statistics -->
     <xsl:template name="statistics">
         <xsl:for-each select="//statistics/statistic">
-            <tr>
+            <tr xmlns="http://www.w3.org/1999/xhtml">
                 <td>
                     <b>
                         <xsl:value-of select="@name" />
