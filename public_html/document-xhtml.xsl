@@ -33,6 +33,15 @@
                         <xsl:call-template name="typologies" />
                     </div>
                 </div>
+                <div class="statistics-section">
+                    <h1>Statistics</h1>
+                    <hr />
+                    <table class="statistics" border="1">
+                        <tbody>
+                            <xsl:call-template name="statistics" />
+                        </tbody>
+                    </table>
+                </div>
             </body>
         </html>
     </xsl:template>
@@ -134,6 +143,19 @@
         </xsl:for-each>
     </xsl:template>
     
-    
-    
+    <!-- Statistics -->
+    <xsl:template name="statistics">
+        <xsl:for-each select="//statistics/statistic">
+            <tr>
+                <td>
+                    <b>
+                        <xsl:value-of select="@name" />
+                    </b>
+                </td>
+                <td>
+                    <xsl:value-of select="." />
+                </td>
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
 </xsl:stylesheet>
