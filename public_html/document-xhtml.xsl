@@ -50,20 +50,22 @@
                 <p>
                     <xsl:value-of select="description" />
                 </p>
-                <div class="planet__satellites">
-                    <b>Satellites: </b>
-                    <xsl:for-each select="satellites/satellite">
-                        <a>
-                            <xsl:attribute name="href">
-                                <xsl:value-of select="concat('#', @id)" />
-                            </xsl:attribute>
-                            <xsl:value-of select="name" />
-                        </a>
-                        <xsl:if test="not(position()=last())">
-                            <xsl:text>, </xsl:text>
-                        </xsl:if>
-                    </xsl:for-each>
-                </div>
+                <xsl:if test="satellites">
+                    <div class="planet__satellites">
+                        <b>Satellites: </b>
+                        <xsl:for-each select="satellites/satellite">
+                            <a>
+                                <xsl:attribute name="href">
+                                    <xsl:value-of select="concat('#', @id)" />
+                                </xsl:attribute>
+                                <xsl:value-of select="name" />
+                            </a>
+                            <xsl:if test="not(position()=last())">
+                                <xsl:text>, </xsl:text>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </div>
+                </xsl:if>
             </div>
         </xsl:for-each>
     </xsl:template>
