@@ -100,7 +100,20 @@
             <div class="typology">
                 <h2>
                     <xsl:value-of select="name" />
+                    <xsl:value-of select="concat(' (', planets/@count, ')')" />
                 </h2>
+                <ul>
+                    <xsl:for-each select="planets/planet">
+                        <li>
+                            <a>
+                                <xsl:attribute name="href">
+                                    <xsl:value-of select="concat('#', @id)" />
+                                </xsl:attribute>
+                                <xsl:value-of select="name" />
+                            </a>
+                        </li>
+                    </xsl:for-each>
+                </ul>
             </div>
         </xsl:for-each>
     </xsl:template>
