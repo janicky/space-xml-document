@@ -12,6 +12,8 @@
         <xsl:call-template name="planets" />
         <xsl:call-template name="newline" />
         <xsl:call-template name="satellites" />
+        <xsl:call-template name="newline" />
+        <xsl:call-template name="missions" />
     </xsl:template>
     
     <xsl:template name="planets">
@@ -119,6 +121,47 @@
                 <xsl:with-param name="length" select="10" />
             </xsl:call-template>
             <xsl:call-template name="newline" />
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template name="missions">
+        <xsl:call-template name="header">
+            <xsl:with-param name="text" select="'MISSIONS'" />
+        </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'ID'" />
+            <xsl:with-param name="length" select="10" />
+        </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'NAME'" />
+            <xsl:with-param name="length" select="20" />
+        </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'TARGET(S)'" />
+            <xsl:with-param name="length" select="50" />
+        </xsl:call-template>
+        <xsl:call-template name="newline" />
+        <xsl:for-each select="//missions/mission">
+            <xsl:call-template name="column">
+                <xsl:with-param name="text" select="@id" />
+                <xsl:with-param name="length" select="10" />
+            </xsl:call-template>
+            <xsl:call-template name="column">
+                <xsl:with-param name="text" select="name" />
+                <xsl:with-param name="length" select="20" />
+            </xsl:call-template>
+            <xsl:text>&#160;</xsl:text>
+            <xsl:call-template name="mission-targets" />
+            <xsl:call-template name="newline" />
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template name="mission-targets">
+        <xsl:for-each select="targets/target">
+            <xsl:value-of select="." />
+            <xsl:if test="not(position()=last())">
+                <xsl:text>, </xsl:text>
+            </xsl:if>
         </xsl:for-each>
     </xsl:template>
 
