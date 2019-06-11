@@ -10,6 +10,8 @@
 
     <xsl:template match="/">
         <xsl:call-template name="planets" />
+        <xsl:call-template name="newline" />
+        <xsl:call-template name="satellites" />
     </xsl:template>
     
     <xsl:template name="planets">
@@ -37,7 +39,7 @@
             <xsl:with-param name="length" select="20" />
         </xsl:call-template>
         <xsl:call-template name="newline" />
-        <xsl:for-each select="//planets/planet">
+        <xsl:for-each select="//space/planets/planet">
             <xsl:call-template name="column">
                 <xsl:with-param name="text" select="@id" />
                 <xsl:with-param name="length" select="15" />
@@ -57,6 +59,64 @@
             <xsl:call-template name="column">
                 <xsl:with-param name="text" select="parameters/periapsis" />
                 <xsl:with-param name="length" select="20" />
+            </xsl:call-template>
+            <xsl:call-template name="newline" />
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template name="satellites">
+        <xsl:call-template name="header">
+            <xsl:with-param name="text" select="'SATELLITES'" />
+        </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'ID'" />
+            <xsl:with-param name="length" select="10" />
+        </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'NAME'" />
+            <xsl:with-param name="length" select="15" />
+        </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'BODY'" />
+            <xsl:with-param name="length" select="15" />
+        </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'APOAPSIS [km]'" />
+            <xsl:with-param name="length" select="20" />
+        </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'PERIAPSIS [km]'" />
+            <xsl:with-param name="length" select="20" />
+        </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'INCL. [°]'" />
+            <xsl:with-param name="length" select="10" />
+        </xsl:call-template>
+        <xsl:call-template name="newline" />
+        <xsl:for-each select="//space/planets/planet/satellites/satellite">
+            <xsl:call-template name="column">
+                <xsl:with-param name="text" select="@id" />
+                <xsl:with-param name="length" select="10" />
+            </xsl:call-template>
+            <xsl:call-template name="column">
+                <xsl:with-param name="text" select="name" />
+                <xsl:with-param name="length" select="15" />
+            </xsl:call-template>
+            <xsl:call-template name="column">
+                <xsl:with-param name="text" select="../../name" />
+                <xsl:with-param name="length" select="15" />
+            </xsl:call-template>
+            <xsl:call-template name="column">
+                <xsl:with-param name="text" select="parameters/apoapsis" />
+                <xsl:with-param name="length" select="20" />
+            </xsl:call-template>
+            <xsl:call-template name="column">
+                <xsl:with-param name="text" select="parameters/periapsis" />
+                <xsl:with-param name="length" select="20" />
+            </xsl:call-template>
+            <xsl:call-template name="column">
+                <xsl:with-param name="text" select="parameters/inclination" />
+                <xsl:with-param name="length" select="10" />
             </xsl:call-template>
             <xsl:call-template name="newline" />
         </xsl:for-each>
