@@ -16,10 +16,47 @@
         <xsl:call-template name="header">
             <xsl:with-param name="text" select="'PLANETS'" />
         </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'ID'" />
+            <xsl:with-param name="length" select="15" />
+        </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'NAME'" />
+            <xsl:with-param name="length" select="20" />
+        </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'DISC. DATE'" />
+            <xsl:with-param name="length" select="15" />
+        </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'APOAPSIS [km]'" />
+            <xsl:with-param name="length" select="20" />
+        </xsl:call-template>
+        <xsl:call-template name="column">
+            <xsl:with-param name="text" select="'PERIAPSIS [km]'" />
+            <xsl:with-param name="length" select="20" />
+        </xsl:call-template>
+        <xsl:call-template name="newline" />
         <xsl:for-each select="//planets/planet">
             <xsl:call-template name="column">
-                <xsl:with-param name="text" select="'test'" />
-                <xsl:with-param name="length" select="50" />
+                <xsl:with-param name="text" select="@id" />
+                <xsl:with-param name="length" select="15" />
+            </xsl:call-template>
+            <xsl:call-template name="column">
+                <xsl:with-param name="text" select="name" />
+                <xsl:with-param name="length" select="20" />
+            </xsl:call-template>
+            <xsl:call-template name="column">
+                <xsl:with-param name="text" select="discovery_date" />
+                <xsl:with-param name="length" select="15" />
+            </xsl:call-template>
+            <xsl:call-template name="column">
+                <xsl:with-param name="text" select="parameters/apoapsis" />
+                <xsl:with-param name="length" select="20" />
+            </xsl:call-template>
+            <xsl:call-template name="column">
+                <xsl:with-param name="text" select="parameters/periapsis" />
+                <xsl:with-param name="length" select="20" />
             </xsl:call-template>
             <xsl:call-template name="newline" />
         </xsl:for-each>
