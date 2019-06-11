@@ -6,6 +6,7 @@
     <xsl:output method="text"/>
     
     <xsl:variable name="line" select="'────────────────────────────────────────────────────────────────────────────────────────────────'" />
+    <xsl:variable name="dots" select="'....................................................................................'" />
     <xsl:variable name="spaces" select="'                                                                                        '" />
 
     <xsl:template match="/">
@@ -16,6 +17,8 @@
         <xsl:call-template name="missions" />
         <xsl:call-template name="newline" />
         <xsl:call-template name="typologies" />
+        <xsl:call-template name="newline" />
+        <xsl:call-template name="statistics" />
     </xsl:template>
     
     <xsl:template name="planets">
@@ -181,6 +184,18 @@
             <xsl:call-template name="newline" />
         </xsl:for-each>
     </xsl:template>
+    
+    <xsl:template name="statistics">
+        <xsl:call-template name="header">
+            <xsl:with-param name="text" select="'STATISTICS'" />
+        </xsl:call-template>
+        <xsl:for-each select="//statistics/statistic">
+            <xsl:variable name="name" select="upper-case(translate(@name, '-', ' '))" />
+            <xsl:variable name="fill" select="substring($dots, 1, (50 - string-length($name)))" />
+            <xsl:value-of select="concat(' ', $name, ' ', $fill, ' ', .)" />
+            <xsl:call-template name="newline" />
+        </xsl:for-each>
+    </xsl:template>
 
     <xsl:template name="header">
         <xsl:param name="text" />
@@ -202,7 +217,7 @@
         <xsl:param name="length" />
         <xsl:param name="text" />
         <xsl:variable name="fill" select="substring($spaces, 1, ($length - string-length($text) - 1))" />
-        <xsl:value-of select="concat(' ', $text, $fill)" />
+        <xsl:value-of select="concat(' ', $text, ' ', $fill)" />
         
     </xsl:template>
 </xsl:stylesheet>
