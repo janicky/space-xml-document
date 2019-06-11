@@ -14,6 +14,8 @@
         <xsl:call-template name="satellites" />
         <xsl:call-template name="newline" />
         <xsl:call-template name="missions" />
+        <xsl:call-template name="newline" />
+        <xsl:call-template name="typologies" />
     </xsl:template>
     
     <xsl:template name="planets">
@@ -162,6 +164,21 @@
             <xsl:if test="not(position()=last())">
                 <xsl:text>, </xsl:text>
             </xsl:if>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template name="typologies">
+        <xsl:call-template name="header">
+            <xsl:with-param name="text" select="'TYPOLOGIES'" />
+        </xsl:call-template>
+        <xsl:for-each select="//typologies/typology">
+            <xsl:value-of select="concat(' ', upper-case(name))" />
+            <xsl:call-template name="newline" />
+            <xsl:for-each select="planets/planet">
+                <xsl:value-of select="concat('  └─ ', name)" />
+                <xsl:call-template name="newline" />
+            </xsl:for-each>
+            <xsl:call-template name="newline" />
         </xsl:for-each>
     </xsl:template>
 
